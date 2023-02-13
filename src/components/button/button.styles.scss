@@ -1,0 +1,31 @@
+.button-container {
+    padding: 15px 40px;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+
+
+
+    &.primary {
+        background-color: #b29e72;
+
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+    &.secondary {
+        background-color: #ffffff11;
+
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+}

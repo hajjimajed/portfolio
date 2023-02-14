@@ -16,18 +16,9 @@ const Home = () => {
                 <h1>welcome to my portfolio<span>&#9632;</span></h1>
             </div>
             <div className='welcome-name'>
-                <div><h1>majed</h1></div><div><h1>hajji<span>&#9632;</span></h1></div>
+                <div><h1>majed</h1></div><div><h1>hajji<span> &#9632;</span></h1></div>
             </div>
             <div className='date'>
-                <h1>
-                    {dateState.toLocaleString('en-GB', {
-                        hour: 'numeric',
-                    })}
-                    <span> : </span>
-                    {dateState.toLocaleString('en-GB', {
-                        minute: 'numeric',
-                    })}
-                </h1>
                 <h1>
                     {' '}
                     {dateState.toLocaleDateString('en-GB', {
@@ -43,9 +34,30 @@ const Home = () => {
                     })}
                 </h1>
             </div>
-            <div className='welcome-button-container'>
-                <Button buttonType='secondary'>contact me</Button>
-                <Button buttonType='primary'>about me</Button>
+            <div className='welcome-footer-container'>
+                <div className='clock'>
+                    <h1>
+                        <span>
+                            {dateState.toLocaleString('en-GB', {
+                                hour: 'numeric',
+                            })}
+                        </span>
+                        :
+                        <span>
+                            {dateState.toLocaleString('en-GB', {
+                                minute: 'numeric',
+                            })}
+                        </span>
+                    </h1>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div className='button-container'>
+                    <Button buttonType='secondary'>contact me</Button>
+                    <Button buttonType='primary'>about me</Button>
+                </div>
+                <div className='corner-text'><h1>less is more</h1></div>
             </div>
         </div>
     )

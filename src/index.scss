@@ -1,10 +1,10 @@
 body {
-  margin: 0 300px;
+  margin: 0 200px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(60deg, #29323c 0%, #485563 100%);
-
-
+  background: url('https://i.ibb.co/RbbtBSh/bg2.png');
+  background-size: cover;
+  overflow: hidden;
 }
 
 * {

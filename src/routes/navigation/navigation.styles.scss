@@ -3,10 +3,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 0;
+    margin: 30px 80px;
 
     .navigation-logo {
         text-decoration: none;
+        width: 20%;
 
         h1 {
             font-size: 20px;
@@ -14,6 +15,46 @@
             color: #fff;
         }
     }
+
+
+
+    .menu-button {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 34px;
+        cursor: pointer;
+        z-index: 1;
+
+        div {
+            width: 100%;
+            height: 2px;
+            border-radius: 1px;
+            background-color: #fff;
+            transition: 0.1s ease-in all;
+            transform-origin: center;
+            margin: 5px 0;
+        }
+
+        &:hover {
+
+            div:nth-of-type(2) {
+                width: 30px;
+            }
+        }
+    }
+
+}
+
+.navigation-menu-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s cubic-bezier(0.61, 1, 0.88, 1);
 
     .navigation-link {
         display: flex;
@@ -36,10 +77,11 @@
             width: 6px;
             height: 6px;
             border-radius: 3px;
-            background-color: transparent;
             position: absolute;
             top: 45px;
             transition: 0.1s ease-in all;
+            background-color: #c3ac7b;
+            opacity: 0;
         }
 
         &:hover {
@@ -48,8 +90,60 @@
             }
 
             div {
-                background-color: #c3ac7b;
+                opacity: 1;
             }
         }
+    }
+}
+
+@media(max-width:1100px) {
+
+
+    .navigation-menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #00000066;
+        backdrop-filter: blur(5px);
+        z-index: -1;
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+
+    .navigation-container {
+
+        .menu-button {
+            display: flex;
+        }
+    }
+
+}
+
+.nav-menu--visible {
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+}
+
+
+.menu-button--active {
+    div:nth-of-type(1) {
+        transform: rotate(45deg);
+        transform-origin: left;
+    }
+
+    div:nth-of-type(2) {
+        transform: scale(0);
+    }
+
+    div:nth-of-type(3) {
+        transform: rotate(-45deg);
+        transform-origin: left;
     }
 }

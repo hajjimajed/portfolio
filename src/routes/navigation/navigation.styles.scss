@@ -3,16 +3,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 80px;
+    margin: 30px 200px;
 
     .navigation-logo {
         text-decoration: none;
         width: 20%;
 
-        h1 {
-            font-size: 20px;
-            text-transform: capitalize;
-            color: #fff;
+        .main-logo {
+            width: 30px;
+            height: auto;
+            filter: invert(81%) sepia(43%) saturate(293%) hue-rotate(1deg) brightness(87%) contrast(89%);
         }
     }
 
@@ -64,6 +64,13 @@
         text-decoration: none;
         position: relative;
 
+        &.active h1 {
+            color: #c3ac7b;
+        }
+
+        &.active div {
+            opacity: 1;
+        }
 
         h1 {
             font-size: 17px;
@@ -114,6 +121,21 @@
         z-index: -1;
         opacity: 0;
         transform: translateY(-100vh);
+
+        .navigation-link {
+            margin-bottom: 50px;
+
+            h1 {
+                font-size: 35px;
+            }
+
+            div {
+                width: 16px;
+                height: 16px;
+                border-radius: 8px;
+                top: 70px;
+            }
+        }
     }
 
     .navigation-container {
@@ -146,4 +168,57 @@
         transform: rotate(-45deg);
         transform-origin: left;
     }
+}
+
+@media(max-width:950px) {
+    .navigation-container {
+        margin: 30px 120px;
+    }
+}
+
+@media(max-width:750px) {
+    .navigation-container {
+        margin: 30px 100px;
+
+        .navigation-link {
+            margin-bottom: 50px;
+
+            h1 {
+                font-size: 25px;
+            }
+
+            div {
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                top: 50px;
+            }
+        }
+    }
+}
+
+@media(max-width:500px) {
+    .navigation-container {
+        .navigation-link {
+            margin-bottom: 40px;
+
+            h1 {
+                font-size: 20px;
+            }
+
+            div {
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                top: 40px;
+            }
+        }
+    }
+}
+
+@media(max-width:400px) {
+    .navigation-container {
+        margin: 30px 10px;
+    }
+
 }

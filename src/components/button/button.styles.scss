@@ -2,7 +2,7 @@
     width: fit-content;
     height: fit-content;
     padding: 15px 40px;
-    margin: 0 10px;
+    margin: 10px 10px;
     text-align: center;
     font-weight: 600;
     border: none;
@@ -31,4 +31,33 @@
         }
     }
 
+}
+
+
+@media(max-width:1200px) {
+    .button-container {
+        padding: 12px 26px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:775px) {
+    .button-container {
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:510px) {
+    .button-container {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:475px) {
+    .button-container {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
 }

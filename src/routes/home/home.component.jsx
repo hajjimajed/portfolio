@@ -2,6 +2,10 @@ import './home.styles.scss'
 import { useState, useEffect } from 'react';
 
 import Button from '../../components/button/button.component';
+import { ReactComponent as MainLogo } from '../../assets/logo.svg'
+import { ReactComponent as Github } from '../../assets/github.svg'
+import { ReactComponent as Linkedin } from '../../assets/linkedin.svg'
+import { ReactComponent as Instagram } from '../../assets/instagram.svg'
 
 const Home = () => {
 
@@ -12,26 +16,16 @@ const Home = () => {
 
     return (
         <div className='home-container'>
-            <div className='welcome-text'>
+            <div className='welcoming'>
                 <h1>welcome to my portfolio<span>&#9632;</span></h1>
             </div>
             <div className='welcome-name'>
-                <div><h1>majed</h1></div><div><h1>hajji<span> &#9632;</span></h1></div>
+                <MainLogo className='main-logo' />
+                <h1>Majed Hajji</h1>
             </div>
-            <div className='date'>
+            <div className='welcome-text'>
                 <h1>
-                    {' '}
-                    {dateState.toLocaleDateString('en-GB', {
-                        day: 'numeric',
-                    })} .
-                    {' '}
-                    {dateState.toLocaleDateString('en-GB', {
-                        month: 'numeric',
-                    })} .
-                    {' '}
-                    {dateState.toLocaleDateString('en-GB', {
-                        year: 'numeric',
-                    })}
+                    front end web developer
                 </h1>
             </div>
             <div className='welcome-footer-container'>
@@ -58,6 +52,15 @@ const Home = () => {
                     <Button buttonType='primary'>about me</Button>
                 </div>
                 <div className='corner-text'><h1>less is more</h1></div>
+            </div>
+
+            <div className='left-sider'>
+                <Github className='sider-logo' />
+                <Linkedin className='sider-logo' />
+                <Instagram className='sider-logo' />
+            </div>
+            <div className='right-sider'>
+                <h1>from concept to reality</h1>
             </div>
         </div>
     )

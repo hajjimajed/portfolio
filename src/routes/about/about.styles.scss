@@ -1,0 +1,70 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 200px;
+
+    .about-me {
+        flex-basis: 50%;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 60px;
+            color: #b29e72;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 16px;
+            color: #ffffff;
+            text-transform: capitalize;
+            font-weight: 400;
+        }
+
+        .about-link {
+            text-decoration: none;
+            text-transform: capitalize;
+            margin-top: 20px;
+            display: flex;
+
+            h2 {
+                font-size: 18px;
+                color: #b29e72;
+                font-weight: 400;
+            }
+
+            .arrow {
+                width: 25px;
+                height: auto;
+                margin-left: 20px;
+                filter: invert(69%) sepia(14%) saturate(821%) hue-rotate(3deg) brightness(90%) contrast(86%);
+                transform: translateX(-25px);
+                opacity: 0;
+                transition: 0.2s ease-in-out all;
+            }
+
+            &:hover {
+                .arrow {
+                    transform: translateX(-10px);
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+    .my-skills {
+        flex-basis: 50%;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+}

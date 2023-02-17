@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { ReactComponent as MainLogo } from '../../assets/logo.svg'
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 
 
@@ -25,7 +26,15 @@ const Navigation = () => {
 
     return (
         <Fragment>
-            <div className='navigation-container'>
+            <motion.div
+                initial={{ translateY: -100 }}
+                animate={{ translateY: 0 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20
+                }}
+                className='navigation-container'>
                 <Link to='/' className='navigation-logo'><MainLogo className='main-logo' /></Link>
                 <div className={`navigation-menu-container ${isMenuOpen ? 'nav-menu--visible' : ''}`}>
                     <Link onClick={handleMenuLinkClick} to='/' className={`navigation-link ${location.pathname === '/' ? 'active' : ''}`}><h1>home</h1><div></div></Link>
@@ -38,7 +47,7 @@ const Navigation = () => {
                     <div></div>
                     <div></div>
                 </div>
-            </div>
+            </motion.div>
             <Outlet />
         </Fragment>
     )

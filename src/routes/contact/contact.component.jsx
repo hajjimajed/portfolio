@@ -2,6 +2,7 @@ import './contact.styles.scss'
 import Button from '../../components/button/button.component'
 import FormInput from '../../components/form-input/form-input.component'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 import { ReactComponent as Mail } from '../../assets/mail.svg'
 import { ReactComponent as Phone } from '../../assets/phone.svg'
@@ -21,6 +22,27 @@ const defaultFormFields = {
     subject: '',
     message: ''
 }
+
+const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.6,
+            staggerChildren: 0.2,
+            delay: 0.3
+        }
+    }
+};
+
+const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1
+    }
+};
 
 const Contact = () => {
 
@@ -66,9 +88,13 @@ const Contact = () => {
 
 
     return (
-        <div className='contact-container'>
+        <motion.div
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className='contact-container'>
 
-            <div className='contact-infos'>
+            <motion.div variants={item} className='contact-infos'>
                 <h2 className='contact-me'>contact me</h2>
                 <h1 className='problematique'>Got a problem to solve?</h1>
                 <p className='intro'>Get your space suit ready and tell me your ideas to develop your dream application.</p>
@@ -82,17 +108,17 @@ const Contact = () => {
                     <Linkedin className='social-media-icon' />
                     <Instagram className='social-media-icon' />
                 </div>
-            </div>
+            </motion.div>
 
             {
                 isMessageSent ? (
-                    <div className='message-sent-container'>
+                    <motion.div variants={item} className='message-sent-container'>
                         <Deal className='deal-icon' />
                         <h1>thank you for your time</h1>
                         <h2>we'll be in touch shortly</h2>
-                    </div>
+                    </motion.div>
                 ) : (
-                    <div className='contact-form'>
+                    <motion.div variants={item} className='contact-form'>
                         <form action="" onSubmit={handleSubmit}>
                             <FormInput label="Name" required type="name" name="name" value={name} onChange={handleChange} />
                             <FormInput label="Email" required type="email" name="email" value={email} onChange={handleChange} />
@@ -110,13 +136,13 @@ const Contact = () => {
                             </div>
                             <Button type='submit' buttonType='primary'>Send Message</Button>
                         </form>
-                    </div>
+                    </motion.div>
                 )
             }
 
 
 
-        </div>
+        </motion.div>
     )
 }
 

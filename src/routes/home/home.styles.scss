@@ -21,14 +21,13 @@
         .sider-logo {
             width: 35px;
             height: auto;
-            filter: invert(63%) sepia(5%) saturate(2177%) hue-rotate(2deg) brightness(86%) contrast(86%);
-            opacity: 0.3;
+            filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(326deg) brightness(102%) contrast(101%);
+            opacity: 0.5;
             cursor: pointer;
             transition: 0.15s ease-in all;
 
             &:hover {
                 opacity: 1;
-                filter: invert(63%) sepia(5%) saturate(2177%) hue-rotate(2deg) brightness(86%) contrast(86%);
             }
         }
     }
@@ -40,7 +39,7 @@
         margin-right: 50px;
 
         h1 {
-            color: #998865;
+            color: #ffffffa7;
             transform: rotate(90deg);
             font-size: 14px;
             height: 200px;
@@ -108,7 +107,7 @@
     .welcome-footer-container {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         position: relative;
 
@@ -121,6 +120,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: absolute;
             left: 0;
 
             h1 {
@@ -160,6 +160,7 @@
 
         .corner-text {
             right: 0;
+            position: absolute;
 
             h1 {
                 font-size: 18px;
@@ -240,6 +241,14 @@
 
     }
 
+    .home-container .welcome-footer-container .corner-text {
+        bottom: 0;
+    }
+
+    .home-container .welcome-footer-container .clock {
+        bottom: 0;
+    }
+
     .home-container .welcome-footer-container .corner-text h1 {
         font-size: 11px;
     }
@@ -280,6 +289,14 @@
 }
 
 @media(max-width:600px) {
+
+    .home-container .welcome-footer-container .corner-text {
+        bottom: -10px;
+    }
+
+    .home-container .welcome-footer-container .clock {
+        bottom: -0px;
+    }
 
     .home-container .welcome-footer-container .clock h1 {
         font-size: 12px;
@@ -337,5 +354,57 @@
         .sider-logo {
             width: 20px;
         }
+    }
+
+    .home-container .welcome-name .main-logo {
+        width: 100px;
+        margin-top: -45px;
+    }
+
+    .home-container .welcome-name h1 {
+        font-size: 22px;
+    }
+
+    .home-container .right-sider {
+        margin-right: 30px;
+    }
+
+    .home-container .right-sider h1 {
+        color: #ffffffa7;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:390px) {
+    .home-container .welcoming h1 {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .home-container .welcome-text h1 {
+        font-size: 13px;
+    }
+
+    .home-container .welcome-footer-container .corner-text h1 {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+@media(max-width:355px) {
+    .home-container .welcoming h1 {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width:315px) {
+    .home-container .welcoming h1 {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .home-container .welcome-text h1 {
+        font-size: 11px;
     }
 }

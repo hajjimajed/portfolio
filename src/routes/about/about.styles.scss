@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 50px 200px;
+    align-items: flex-start;
+    margin: 40px 200px;
 
     .about-me {
         flex-basis: 50%;
@@ -14,17 +14,18 @@
         align-items: flex-start;
 
         h1 {
-            font-size: 60px;
+            font-size: 50px;
             color: #b29e72;
             text-transform: capitalize;
             font-weight: 700;
         }
 
         p {
-            font-size: 16px;
+            font-size: 14px;
             color: #ffffff;
             text-transform: capitalize;
             font-weight: 400;
+            line-height: 20px;
         }
 
         .about-link {
@@ -66,5 +67,270 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
+
+        h1 {
+            font-size: 50px;
+            color: #b29e72;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 14px;
+            color: #ffffff;
+            text-transform: capitalize;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .skills-level {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+
+            h2 {
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .level-bar1 {
+                width: 100%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: #ffffff84;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                div {
+                    height: 100%;
+                    width: 85%;
+                    background-color: #ffffff;
+                    border-radius: 2px;
+                }
+            }
+
+            .level-bar2 {
+                width: 100%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: #ffffff84;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                div {
+                    height: 100%;
+                    width: 80%;
+                    background-color: #ffffff;
+                    border-radius: 2px;
+                }
+            }
+
+            .level-bar3 {
+                width: 100%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: #ffffff84;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                div {
+                    height: 100%;
+                    width: 60%;
+                    background-color: #ffffff;
+                    border-radius: 2px;
+                }
+            }
+
+            .level-bar4 {
+                width: 100%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: #ffffff84;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                div {
+                    height: 100%;
+                    width: 55%;
+                    background-color: #ffffff;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:1100px) {
+    .about-container {
+        flex-direction: column;
+
+        .about-me {
+            margin-bottom: 50px;
+        }
+
+        .my-skills {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media(max-width:800px) {
+    .about-container {
+        margin: 50px 150px;
+
+        .about-me {
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        .my-skills {
+            h1 {
+                font-size: 40px;
+            }
+
+        }
+    }
+}
+
+@media(max-width:750px) {
+    .about-container {
+        margin: 35px 120px;
+    }
+}
+
+@media(max-width:600px) {
+    .about-container {
+        margin: 25px 60px;
+
+        .about-me {
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .about-link {
+                h2 {
+                    font-size: 15px;
+                }
+
+                .arrow {
+                    width: 18px;
+                }
+            }
+        }
+
+        .my-skills {
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .skills-level {
+                h2 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:400px) {
+    .about-container {
+        margin: 25px 40px;
+
+        .about-me {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            .about-link {
+                h2 {
+                    font-size: 12px;
+                }
+
+                .arrow {
+                    width: 15px;
+                }
+            }
+        }
+
+        .my-skills {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            .skills-level {
+                h2 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:320px) {
+    .about-container {
+        margin: 25px 20px;
+
+        .about-me {
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 9px;
+            }
+
+            .about-link {
+                h2 {
+                    font-size: 10px;
+                }
+
+                .arrow {
+                    width: 12px;
+                }
+            }
+        }
+
+        .my-skills {
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 9px;
+            }
+
+            .skills-level {
+                h2 {
+                    font-size: 12px;
+                }
+            }
+        }
     }
 }

@@ -31,8 +31,7 @@ const Navigation = () => {
                 animate={{ translateY: 0 }}
                 transition={{
                     type: "spring",
-                    stiffness: 260,
-                    damping: 20
+                    duration: 1.2
                 }}
                 className='navigation-container'>
                 <Link to='/' className='navigation-logo'><MainLogo className='main-logo' /></Link>

@@ -1,6 +1,7 @@
 import './home.styles.scss'
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 import Button from '../../components/button/button.component';
 import { ReactComponent as MainLogo } from '../../assets/logo.svg'
@@ -15,7 +16,7 @@ const container = {
         scale: 1,
         transition: {
             delayChildren: 0.6,
-            staggerChildren: 0.2,
+            staggerChildren: 0.3,
             delay: 0.3
         }
     }
@@ -25,11 +26,22 @@ const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
         y: 0,
-        opacity: 1
+        opacity: 1,
+        transition: {
+            duration: 0.5
+        }
     }
 };
 
 const Home = () => {
+
+    const navigate = useNavigate();
+    const contactNavigateHandler = () => {
+        navigate('/contact');
+    }
+    const aboutNavigateHandler = () => {
+        navigate('/about');
+    }
 
     const [dateState, setDateState] = useState(new Date());
     useEffect(() => {
@@ -82,8 +94,8 @@ const Home = () => {
                             </div>
                         </div>
                         <div className='button-container'>
-                            <Button buttonType='secondary'>contact me</Button>
-                            <Button buttonType='primary'>about me</Button>
+                            <Button onClick={contactNavigateHandler} buttonType='secondary'>contact me</Button>
+                            <Button onClick={aboutNavigateHandler} buttonType='primary'>about me</Button>
                         </div>
                         <div className='corner-text'><h1>less is more</h1></div>
                     </motion.div></>
@@ -98,8 +110,7 @@ const Home = () => {
                 animate={{ translateX: 0 }}
                 transition={{
                     type: "spring",
-                    stiffness: 260,
-                    damping: 20
+                    duration: 1.2
                 }}
                 className='left-sider'>
                 <Github className='sider-logo' />
@@ -111,8 +122,7 @@ const Home = () => {
                 animate={{ translateX: 0 }}
                 transition={{
                     type: "spring",
-                    stiffness: 260,
-                    damping: 20
+                    duration: 1.2
                 }}
                 className='right-sider'>
                 <h1>from concept to reality</h1>

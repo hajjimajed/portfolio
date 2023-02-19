@@ -1,13 +1,14 @@
 import './home.styles.scss'
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Button from '../../components/button/button.component';
 import { ReactComponent as MainLogo } from '../../assets/logo.svg'
 import { ReactComponent as Github } from '../../assets/github.svg'
 import { ReactComponent as Linkedin } from '../../assets/linkedin.svg'
 import { ReactComponent as Instagram } from '../../assets/instagram.svg'
+import { ReactComponent as Arrow } from '../../assets/arrow-r.svg'
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -48,85 +49,45 @@ const Home = () => {
         setInterval(() => setDateState(new Date()), 30000);
     }, []);
 
+
+
+    let newDate = new Date()
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+
     return (
         <>
-            <motion.div
-                variants={container}
-                initial="hidden"
-                animate="visible"
-                className='home-container'>
 
 
-                <>
-                    <motion.div
-                        variants={item} className='welcoming'>
-                        <h1>welcome to my portfolio<span>&#9632;</span></h1>
-                    </motion.div>
-                    <motion.div
-                        variants={item} className='welcome-name'>
-                        <MainLogo className='main-logo' />
-                        <h1>Majed Hajji</h1>
-                    </motion.div>
-                    <motion.div
-                        variants={item} className='welcome-text'>
-                        <h1>
-                            front end web developer
-                        </h1>
-                    </motion.div>
-                    <motion.div
-                        variants={item} className='welcome-footer-container'>
-                        <div className='clock'>
-                            <h1>
-                                <span>
-                                    {dateState.toLocaleString('en-GB', {
-                                        hour: 'numeric',
-                                    })}
-                                </span>
-                                :
-                                <span>
-                                    {dateState.toLocaleString('en-GB', {
-                                        minute: 'numeric',
-                                    })}
-                                </span>
-                            </h1>
-                            <div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div className='button-container'>
-                            <Button onClick={contactNavigateHandler} buttonType='secondary'>contact me</Button>
-                            <Button onClick={aboutNavigateHandler} buttonType='primary'>about me</Button>
-                        </div>
-                        <div className='corner-text'><h1>less is more</h1></div>
-                    </motion.div></>
+            <div className='home-container'>
+                <div className='welcoming'>
+                    <h1>welcome<span>&#9632;</span></h1>
+                    <div className='welcoming-name'>
+                        <div></div>
+                        <h1>front-end web developer<span>&#9632;</span></h1>
+                    </div>
+                </div>
 
+                <div className='buttons-container'>
+                    <Link to='/about' className='home-link'><h1>about</h1><Arrow className='arrow' /></Link>
+                    <Link to='/projects' className='home-link'><h1>projects</h1><Arrow className='arrow' /></Link>
+                </div>
 
+                <div className='date'>
+                    <h1>{date}</h1>
+                    <h1>&nbsp;/&nbsp;</h1>
+                    <h1>{month}</h1>
+                    <h1>&nbsp;/&nbsp;</h1>
+                    <h1>{year}</h1>
+                </div>
+                <div className='social-media'>
+                    <Link className='social-media-link'> <Github className='social-media-icon' /></Link>
+                    <Link className='social-media-link'> <Linkedin className='social-media-icon' /></Link>
+                    <Link className='social-media-link'> <Instagram className='social-media-icon' /></Link>
+                </div>
+            </div>
 
-
-
-            </motion.div>
-            <motion.div
-                initial={{ translateX: -100 }}
-                animate={{ translateX: 0 }}
-                transition={{
-                    type: "spring",
-                    duration: 1.2
-                }}
-                className='left-sider'>
-                <Github className='sider-logo' />
-                <Linkedin className='sider-logo' />
-                <Instagram className='sider-logo' />
-            </motion.div>
-            <motion.div
-                initial={{ translateX: 100 }}
-                animate={{ translateX: 0 }}
-                transition={{
-                    type: "spring",
-                    duration: 1.2
-                }}
-                className='right-sider'>
-                <h1>from concept to reality</h1>
-            </motion.div>
         </>
     )
 }

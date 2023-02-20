@@ -33,18 +33,7 @@ const item = {
 const Navigation = () => {
     const location = useLocation();
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isButtonClicked, setIsButtonClicked] = useState(false);
-
-    const handleMenuClick = () => {
-        setIsMenuOpen(!isMenuOpen);
-        setIsButtonClicked(!isButtonClicked);
-    }
-
-    const handleMenuLinkClick = () => {
-        setIsMenuOpen(false);
-        setIsButtonClicked(!isButtonClicked);
-    };
 
     const [isNavigationMenuOpen, setIsNavigationMenuOpen] = useState(false);
 
@@ -79,11 +68,11 @@ const Navigation = () => {
                     </svg>
                 </Link>
 
-                <div onClick={menuToggle} className={`navigation-button ${isButtonClicked ? 'navigation-button--active' : ''}`}><h1>menu</h1></div>
+                <div onClick={menuToggle} className={`navigation-button ${isButtonClicked ? 'navigation-button--active' : ''}`}><h1><span> - </span>menu<span> - </span></h1></div>
                 <div className={`navigation-links-container ${isNavigationMenuOpen ? 'navigation-menu--visible' : ''}`} >
-                    <Link onClick={handleMenuLink} to='/projects' className={`navigation-container-link ${isNavigationMenuOpen ? 'navigation-container-link--active' : ''}`}><h1>projects<span>&#9632;</span></h1></Link>
-                    <Link onClick={handleMenuLink} to='/about' className={`navigation-container-link ${isNavigationMenuOpen ? 'navigation-container-link--active' : ''}`}><h1>about<span>&#9632;</span></h1></Link>
-                    <Link onClick={handleMenuLink} to='/contact' className={`navigation-container-link ${isNavigationMenuOpen ? 'navigation-container-link--active' : ''}`}><h1>contact<span>&#9632;</span></h1></Link>
+                    <Link onClick={handleMenuLink} to='/projects' className={`navigation-container-link ${isNavigationMenuOpen ? 'navigation-container-link--active' : ''} ${location.pathname === '/projects' ? 'active' : ''}`}><h1>projects<span>&#9632;</span></h1></Link>
+                    <Link onClick={handleMenuLink} to='/about' className={`navigation-container-link ${isNavigationMenuOpen ? 'navigation-container-link--active' : ''} ${location.pathname === '/about' ? 'active' : ''}`}><h1>about<span>&#9632;</span></h1></Link>
+                    <Link onClick={handleMenuLink} to='/contact' className={`navigation-container-link ${isNavigationMenuOpen ? 'navigation-container-link--active' : ''} ${location.pathname === '/contact' ? 'active' : ''}`}><h1>contact<span>&#9632;</span></h1></Link>
                 </div>
             </motion.div>
 

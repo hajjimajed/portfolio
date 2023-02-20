@@ -8,7 +8,7 @@ import { ReactComponent as MainLogo } from '../../assets/logo.svg'
 import { ReactComponent as Github } from '../../assets/github.svg'
 import { ReactComponent as Linkedin } from '../../assets/linkedin.svg'
 import { ReactComponent as Instagram } from '../../assets/instagram.svg'
-import { ReactComponent as Arrow } from '../../assets/arrow-r.svg'
+import { ReactComponent as Arrow } from '../../assets/right-arrow.svg'
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -37,8 +37,8 @@ const item = {
 const Home = () => {
 
     const navigate = useNavigate();
-    const contactNavigateHandler = () => {
-        navigate('/contact');
+    const projectsNavigateHandler = () => {
+        navigate('/projects');
     }
     const aboutNavigateHandler = () => {
         navigate('/about');
@@ -63,23 +63,18 @@ const Home = () => {
             <div className='home-container'>
                 <div className='welcoming'>
                     <h1>welcome<span>&#9632;</span></h1>
-                    <div className='welcoming-name'>
-                        <div></div>
-                        <h1>front-end web developer<span>&#9632;</span></h1>
+                    <h2>Hello there! I'm <span>Majed</span></h2>
+                    <h2>web developer.</h2>
+                    <div className='buttons-container'>
+                        <Button onClick={aboutNavigateHandler} id='btn1' buttonType='primary'>about</Button>
+                        <Button onClick={projectsNavigateHandler} buttonType='secondary'>projects</Button>
                     </div>
                 </div>
 
-                <div className='buttons-container'>
-                    <Link to='/about' className='home-link'><h1>about</h1><Arrow className='arrow' /></Link>
-                    <Link to='/projects' className='home-link'><h1>projects</h1><Arrow className='arrow' /></Link>
-                </div>
+
 
                 <div className='date'>
-                    <h1>{date}</h1>
-                    <h1>&nbsp;/&nbsp;</h1>
-                    <h1>{month}</h1>
-                    <h1>&nbsp;/&nbsp;</h1>
-                    <h1>{year}</h1>
+                    <h1>LESS IS MORE</h1>
                 </div>
                 <div className='social-media'>
                     <Link className='social-media-link'> <Github className='social-media-icon' /></Link>

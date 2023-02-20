@@ -20,7 +20,7 @@
         align-items: flex-start;
 
         .contact-me {
-            color: #f72585;
+            color: #fc6dab;
             font-size: 30px;
             font-weight: 700;
             margin: 0;
@@ -67,7 +67,7 @@
                 h1 {
                     font-size: 14px;
                     font-weight: 400;
-                    color: #f72585;
+                    color: #fc6dab;
                 }
             }
         }
@@ -110,11 +110,11 @@
                 outline: none;
 
                 &.no-value {
-                    border-color: #e6394794;
+                    border-color: #fc6dab94;
                 }
 
                 &:focus {
-                    border-color: #2ec4b696;
+                    border-color: #1dd3b096;
 
                 }
 
@@ -138,7 +138,7 @@
                 }
 
                 span {
-                    color: #f72585;
+                    color: #fc6dab;
                 }
             }
         }

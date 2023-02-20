@@ -10,25 +10,40 @@
     .welcoming {
         display: flex;
         flex-direction: column;
-        margin-top: 100px;
 
         h1 {
-            font-size: 70px;
+            font-size: 80px;
             font-weight: 700;
             text-transform: capitalize;
             color: #fff;
             margin: 0;
             padding: 0;
+            margin-bottom: 25px;
 
             span {
                 font-size: 20px;
             }
         }
 
+        h2 {
+            font-size: 50px;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+
+            span {
+                font-weight: 600;
+                text-decoration: underline #fc6dab;
+            }
+
+        }
+
         .welcoming-name {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             margin-top: 25px;
 
@@ -55,46 +70,15 @@
     }
 
     .buttons-container {
-        margin-top: 100px;
+        margin-top: 40px;
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
 
-        .home-link {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
+        #btn1 {
             margin-right: 50px;
-            width: 200px;
-            overflow: hidden;
-
-            h1 {
-                font-size: 25px;
-                font-weight: 700;
-                text-transform: uppercase;
-                color: #fff;
-            }
-
-            .arrow {
-                width: 30px;
-                height: auto;
-                transition: 0.2s ease-in-out all;
-                margin-left: 10px;
-
-                path {
-                    fill: #fff;
-                }
-            }
-
-            &:hover {
-                .arrow {
-                    transform: translateX(10px);
-                }
-            }
         }
     }
 
@@ -116,7 +100,7 @@
 
     .social-media {
         position: absolute;
-        bottom: 50px;
+        bottom: 60px;
         right: 100px;
         display: flex;
         flex-direction: row;
@@ -148,4 +132,124 @@
 
 
     }
+}
+
+@media(max-width:760px) {
+    .home-container .welcoming h1 {
+        font-size: 60px;
+
+        span {
+            font-size: 15px;
+        }
+    }
+
+    .home-container .welcoming h2 {
+        font-size: 35px;
+    }
+
+    .home-container .buttons-container #btn1 {
+        margin-right: 40px;
+    }
+}
+
+@media(max-width:600px) {
+    .home-container .welcoming h1 {
+        font-size: 50px;
+
+        span {
+            font-size: 12px;
+        }
+    }
+
+    .home-container .welcoming h2 {
+        font-size: 25px;
+    }
+
+    .home-container .buttons-container #btn1 {
+        margin-right: 20px;
+    }
+
+    .home-container .social-media .social-media-link .social-media-icon {
+        margin-left: 20px;
+    }
+}
+
+@media(max-width:500px) {
+    .home-container {
+        margin: 0 50px;
+    }
+
+    .home-container .date {
+        left: 50px;
+    }
+
+    .home-container .social-media {
+        right: 50px;
+    }
+
+    .home-container .social-media .social-media-link .social-media-icon {
+        margin-left: 15px;
+    }
+}
+
+@media(max-width:385px) {
+    .home-container .welcoming h1 {
+        font-size: 40px;
+
+        span {
+            font-size: 10px;
+        }
+    }
+
+    .home-container .welcoming h2 {
+        font-size: 20px;
+    }
+
+    .home-container .buttons-container #btn1 {
+        margin-right: 15px;
+    }
+
+    .home-container .date {
+        left: 25px;
+    }
+
+    .home-container .social-media {
+        right: 25px;
+    }
+
+    .home-container .social-media .social-media-link .social-media-icon {
+        margin-left: 12px;
+    }
+
+}
+
+@media(max-width:330px) {
+    .home-container .welcoming h1 {
+        font-size: 38px;
+
+        span {
+            font-size: 10px;
+        }
+    }
+
+    .home-container .welcoming h2 {
+        font-size: 18px;
+    }
+
+    .home-container .buttons-container #btn1 {
+        margin-right: 13px;
+    }
+
+    .home-container .date {
+        left: 10px;
+    }
+
+    .home-container .social-media {
+        right: 10px;
+    }
+
+    .home-container .social-media .social-media-link .social-media-icon {
+        margin-left: 10px;
+    }
+
 }

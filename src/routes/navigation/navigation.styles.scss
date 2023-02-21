@@ -25,7 +25,7 @@
         cursor: pointer;
 
         h1 {
-            color: #fc6dab;
+            color: #ffffffc9;
             font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
@@ -42,7 +42,7 @@
 
     .navigation-button--active {
         h1 {
-            color: #ffffffc9;
+            color: #fc6dab;
         }
     }
 
@@ -69,7 +69,15 @@
                 color: #1dd3b0;
             }
 
+            &:hover span {
+                color: #1dd3b0;
+            }
+
             &.active h1 {
+                color: #1dd3b0;
+            }
+
+            &.active span {
                 color: #1dd3b0;
             }
         }
@@ -180,6 +188,10 @@
 
     .navigation-container .navigation-links-container {
         padding-right: 90px;
+    }
+
+    .navigation-container .navigation-button h1 {
+        font-size: 12px;
     }
 }
 

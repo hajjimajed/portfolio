@@ -1,86 +1,158 @@
 .about-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 40px 200px;
+    margin: 40px 100px;
 
     .about-me {
-        flex-basis: 50%;
-        margin-right: 25px;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
 
         h1 {
-            font-size: 50px;
-            color: #b29e72;
-            text-transform: capitalize;
+            font-size: 60px;
             font-weight: 700;
+            text-transform: capitalize;
+            margin: 0;
+
+            span {
+                font-size: 30px;
+            }
         }
 
-        p {
-            font-size: 14px;
-            color: #ffffff;
-            text-transform: capitalize;
-            font-weight: 400;
-            line-height: 20px;
-        }
-
-        .about-link {
-            text-decoration: none;
-            text-transform: capitalize;
-            margin-top: 20px;
+        .about-me-header {
+            width: 100%;
             display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
 
-            h2 {
-                font-size: 18px;
-                color: #b29e72;
-                font-weight: 400;
+            div {
+                width: 60px;
+                height: 2px;
+                background-color: #ffffff;
             }
 
-            .arrow {
-                width: 25px;
-                height: auto;
-                margin-left: 20px;
-                filter: invert(69%) sepia(14%) saturate(821%) hue-rotate(3deg) brightness(90%) contrast(86%);
-                transform: translateX(-25px);
-                opacity: 0;
-                transition: 0.2s ease-in-out all;
+            h1 {
+                font-size: 24px;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin: 0 30px;
+                text-align: center;
+            }
+        }
+
+        .about-me-profile {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+
+            .about-image {
+                width: 400px;
+                height: 400px;
+                overflow: hidden;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+
+                img {
+                    height: 100%;
+                    width: auto;
+                    transition: 0.6s ease-in-out all;
+                }
             }
 
-            &:hover {
-                .arrow {
-                    transform: translateX(-10px);
-                    opacity: 1;
+            .about-name {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: -150px;
+
+                h1 {
+                    font-size: 60px;
+                    font-weight: 800;
+                    text-transform: capitalize;
+                    color: #fc6dab;
+                    z-index: 1;
+
+                    span {
+                        font-size: 22px;
+                        color: #fc6dab;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-transform: capitalize;
                 }
             }
         }
 
+        .about-me-text {
+            width: 80%;
+            margin-top: 50px;
+
+            p {
+                font-size: 16px;
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+        }
     }
 
     .my-skills {
-        flex-basis: 50%;
-        margin-right: 25px;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
+        margin: 100px 0;
 
-        h1 {
-            font-size: 50px;
-            color: #b29e72;
-            text-transform: capitalize;
-            font-weight: 700;
+        .my-skills-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
+            div {
+                width: 60px;
+                height: 2px;
+                background-color: #ffffff;
+            }
+
+            h1 {
+                font-size: 24px;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin: 0 30px;
+                text-align: center;
+            }
         }
 
-        p {
-            font-size: 14px;
-            color: #ffffff;
-            text-transform: capitalize;
-            font-weight: 400;
-            line-height: 20px;
+        .my-skils-text {
+            width: 80%;
+            margin-top: 50px;
+
+            p {
+                font-size: 16px;
+                font-weight: 300;
+                text-transform: capitalize;
+            }
         }
 
         .skills-level {
@@ -88,21 +160,21 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            width: 100%;
+            width: 60%;
+            margin-top: 50px;
 
             h2 {
-                font-size: 18px;
+                font-size: 20px;
                 color: #ffffff;
                 text-transform: capitalize;
-                font-weight: 700;
-                margin-bottom: 10px;
+                font-weight: 500;
+                margin-bottom: 20px;
             }
 
             .level-bar1 {
                 width: 100%;
-                height: 3px;
-                border-radius: 2px;
-                background-color: #ffffff84;
+                height: 20px;
+                background-color: #ffffff4c;
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -110,16 +182,14 @@
                 div {
                     height: 100%;
                     width: 85%;
-                    background-color: #ffffff;
-                    border-radius: 2px;
+                    background-color: #1dd3b0;
                 }
             }
 
             .level-bar2 {
                 width: 100%;
-                height: 3px;
-                border-radius: 2px;
-                background-color: #ffffff84;
+                height: 20px;
+                background-color: #ffffff4c;
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -127,16 +197,14 @@
                 div {
                     height: 100%;
                     width: 80%;
-                    background-color: #ffffff;
-                    border-radius: 2px;
+                    background-color: #1dd3b0;
                 }
             }
 
             .level-bar3 {
                 width: 100%;
-                height: 3px;
-                border-radius: 2px;
-                background-color: #ffffff84;
+                height: 20px;
+                background-color: #ffffff4c;
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -144,16 +212,14 @@
                 div {
                     height: 100%;
                     width: 60%;
-                    background-color: #ffffff;
-                    border-radius: 2px;
+                    background-color: #1dd3b0;
                 }
             }
 
             .level-bar4 {
                 width: 100%;
-                height: 3px;
-                border-radius: 2px;
-                background-color: #ffffff84;
+                height: 20px;
+                background-color: #ffffff4c;
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -161,8 +227,7 @@
                 div {
                     height: 100%;
                     width: 55%;
-                    background-color: #ffffff;
-                    border-radius: 2px;
+                    background-color: #1dd3b0;
                 }
             }
         }
@@ -170,167 +235,375 @@
 }
 
 
-@media(max-width:1100px) {
-    .about-container {
-        flex-direction: column;
+@media(max-width:1000px) {}
 
-        .about-me {
-            margin-bottom: 50px;
-        }
-
-        .my-skills {
-            margin-bottom: 50px;
-        }
-    }
-}
+@media(max-width:925px) {}
 
 @media(max-width:800px) {
+
     .about-container {
-        margin: 50px 150px;
+        margin: 40px 80px;
+    }
 
-        .about-me {
-            h1 {
-                font-size: 40px;
-            }
-        }
+    .about-container .about-me h1 {
+        font-size: 50px;
+    }
 
-        .my-skills {
-            h1 {
-                font-size: 40px;
-            }
+    .about-container .about-me h1 span {
+        font-size: 22px;
+    }
 
-        }
+    .about-container .about-me .about-me-header h1 {
+        font-size: 20px;
+        margin: 0 20px;
+    }
+
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 20px;
+        margin: 0 20px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 {
+        font-size: 48px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 span {
+        font-size: 18px;
+    }
+
+    .about-container .about-me .about-me-profile .about-image {
+        width: 350px;
+        height: 350px;
+    }
+
+    .about-container .my-skills .skills-level {
+        width: 70%;
+    }
+
+}
+
+@media(max-width:725px) {
+
+    .about-container .about-me .about-me-header h1 {
+        font-size: 18px;
+        margin: 0 15px;
+    }
+
+    .about-container .about-me .about-me-header div {
+        width: 40px;
+    }
+
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 18px;
+        margin: 0 15px;
+    }
+
+    .about-container .my-skills .my-skills-header div {
+        width: 40px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 {
+        font-size: 40px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 span {
+        font-size: 14px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name p {
+        font-size: 15px;
+    }
+
+    .about-container .about-me .about-me-profile .about-image {
+        width: 320px;
+        height: 320px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name {
+        margin-left: -120px;
+    }
+
+    .about-container .about-me .about-me-text p {
+        font-size: 13px;
+    }
+
+    .about-container .my-skills .my-skils-text p {
+        font-size: 13px;
+    }
+
+    .about-container .my-skills .skills-level {
+        width: 75%;
     }
 }
 
-@media(max-width:750px) {
+@media(max-width:640px) {
     .about-container {
-        margin: 35px 120px;
+        margin: 40px 60px;
+    }
+
+    .about-container .about-me .about-me-profile .about-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 {
+        font-size: 38px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 span {
+        font-size: 12px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name p {
+        font-size: 13px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name {
+        margin-left: -110px;
+    }
+
+    .about-container .my-skills .skills-level {
+        width: 80%;
     }
 }
 
-@media(max-width:600px) {
+@media(max-width:570px) {
+    .about-container .about-me .about-me-header h1 {
+        font-size: 14px;
+        margin: 0 15px;
+    }
+
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 14px;
+        margin: 0 15px;
+    }
+
+    .about-container .about-me h1 {
+        font-size: 40px;
+    }
+
+    .about-container .about-me h1 span {
+        font-size: 18px;
+    }
+
+    .about-container .about-me .about-me-profile .about-image {
+        width: 290px;
+        height: 290px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 {
+        font-size: 32px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 span {
+        font-size: 11px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name p {
+        font-size: 12px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name {
+        margin-left: -90px;
+    }
+
     .about-container {
-        margin: 25px 60px;
+        margin: 40px 50px;
+    }
 
-        .about-me {
-            h1 {
-                font-size: 32px;
-            }
+    .about-container .my-skills .skills-level {
+        width: 85%;
+    }
 
-            p {
-                font-size: 12px;
-            }
+    .about-container .about-me .about-me-text {
+        width: 85%;
+    }
 
-            .about-link {
-                h2 {
-                    font-size: 15px;
-                }
-
-                .arrow {
-                    width: 18px;
-                }
-            }
-        }
-
-        .my-skills {
-            h1 {
-                font-size: 32px;
-            }
-
-            p {
-                font-size: 12px;
-            }
-
-            .skills-level {
-                h2 {
-                    font-size: 16px;
-                }
-            }
-        }
+    .about-container .my-skills .skills-level h2 {
+        font-size: 16px;
     }
 }
 
-@media(max-width:400px) {
+@media(max-width:480px) {
+    .about-container .about-me .about-me-header h1 {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    .about-container .about-me .about-me-header div {
+        width: 20px;
+    }
+
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    .about-container .my-skills .my-skills-header div {
+        width: 20px;
+    }
+
+    .about-container .about-me .about-me-profile .about-image {
+        width: 270px;
+        height: 270px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 {
+        font-size: 30px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 span {
+        font-size: 10px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name p {
+        font-size: 11px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name {
+        margin-left: -90px;
+    }
+
     .about-container {
-        margin: 25px 40px;
+        margin: 40px 40px;
+    }
 
-        .about-me {
-            h1 {
-                font-size: 28px;
-            }
+    .about-container .about-me .about-me-text p {
+        font-size: 11px;
+    }
 
-            p {
-                font-size: 10px;
-            }
+    .about-container .my-skills .my-skils-text p {
+        font-size: 11px;
+    }
 
-            .about-link {
-                h2 {
-                    font-size: 12px;
-                }
+    .about-container .my-skills .skills-level {
+        width: 90%;
+    }
 
-                .arrow {
-                    width: 15px;
-                }
-            }
-        }
+    .about-container .about-me .about-me-text {
+        width: 90%;
+    }
+}
 
-        .my-skills {
-            h1 {
-                font-size: 28px;
-            }
+@media(max-width:460px) {
+    .about-container .about-me .about-me-profile .about-name h1 {
+        font-size: 25px;
+    }
 
-            p {
-                font-size: 10px;
-            }
+    .about-container .about-me .about-me-profile .about-name h1 span {
+        font-size: 9px;
+    }
 
-            .skills-level {
-                h2 {
-                    font-size: 14px;
-                }
-            }
-        }
+    .about-container .about-me .about-me-profile .about-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-container .my-skills .skills-level h2 {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:420px) {
+    .about-container .about-me .about-me-profile .about-name h1 {
+        font-size: 20px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 span {
+        font-size: 7px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name p {
+        font-size: 9px;
+    }
+
+    .about-container {
+        margin: 40px 35px;
+    }
+
+    .about-container .my-skills .skills-level {
+        width: 95%;
+    }
+
+    .about-container .about-me .about-me-text {
+        width: 95%;
+    }
+
+    .about-container .my-skills .skills-level .level-bar1 {
+        height: 16px;
+    }
+
+    .about-container .my-skills .skills-level .level-bar2 {
+        height: 16px;
+    }
+
+    .about-container .my-skills .skills-level .level-bar3 {
+        height: 16px;
+    }
+
+    .about-container .my-skills .skills-level .level-bar4 {
+        height: 16px;
+    }
+}
+
+@media(max-width:395px) {
+
+
+    .about-container .about-me .about-me-profile .about-image {
+        width: 230px;
+        height: 230px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name {
+        margin-left: -70px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 {
+        font-size: 18px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name h1 span {
+        font-size: 7px;
+    }
+
+    .about-container .about-me .about-me-profile .about-name p {
+        font-size: 9px;
+    }
+
+    .about-container {
+        margin: 40px 30px;
+    }
+
+    .about-container .my-skills .skills-level h2 {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:375px) {
+    .about-container .about-me .about-me-profile .about-image {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+@media(max-width:360px) {
+    .about-container .about-me .about-me-profile .about-image {
+        width: 190px;
+        height: 190px;
+    }
+
+    .about-container {
+        margin: 40px 15px;
     }
 }
 
 @media(max-width:320px) {
+    .about-container .about-me .about-me-profile .about-image {
+        width: 170px;
+        height: 170px;
+    }
+
     .about-container {
-        margin: 25px 20px;
-
-        .about-me {
-            h1 {
-                font-size: 25px;
-            }
-
-            p {
-                font-size: 9px;
-            }
-
-            .about-link {
-                h2 {
-                    font-size: 10px;
-                }
-
-                .arrow {
-                    width: 12px;
-                }
-            }
-        }
-
-        .my-skills {
-            h1 {
-                font-size: 25px;
-            }
-
-            p {
-                font-size: 9px;
-            }
-
-            .skills-level {
-                h2 {
-                    font-size: 12px;
-                }
-            }
-        }
+        margin: 40px 8px;
     }
 }

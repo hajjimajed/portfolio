@@ -40,25 +40,49 @@ const About = () => {
             animate="visible"
 
             className='about-container'>
-            <motion.div variants={item} className='about-me'>
-                <h1>me, myself & i</h1>
-                <p>
-                    I’m a Front-End Developer located in Tunisia. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
-                </p>
-                <p>
-                    Well-organised person, problem solver, independent employee with high attention to detail. Fan of Combat Sports, outdoor activities, Designing and Portraits Drawing. A Member of pretty and large family.
-                </p>
-                <p>
-                    Interested in the entire frontend spectrum and working on ambitious projects with positive people.
-                </p>
-                <Link to='/contact' className='about-link'><h2>Let’s create something stunning</h2> <Arrow className='arrow' /></Link>
-            </motion.div>
-            <motion.div variants={item} className='my-skills'>
-                <h1>skills & experience</h1>
-                <p>I create successful responsive webs applications that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts.
-                </p>
-                <p>I also have wide experience working with react js and react native also with SASS, styled components and framer motion .
-                </p>
+
+
+            <div className='about-me'>
+                <h1>about<span>&#9632;</span></h1>
+                <div className='about-me-header'>
+                    <div></div>
+                    <h1>see some infos about me</h1>
+                    <div></div>
+                </div>
+                <div className='about-me-profile'>
+                    <div className='about-image'>
+                        <img src="https://images.unsplash.com/photo-1435348773030-a1d74f568bc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+                    </div>
+                    <div className='about-name'>
+                        <h1>Majed Hajji<span>&#9632;</span></h1>
+                        <p>front-end web developer</p>
+                    </div>
+                </div>
+                <div className='about-me-text'>
+                    <p>
+                        I’m a Front-End Developer located in Tunisia. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+                    </p>
+                    <p>
+                        Well-organised person, problem solver, independent employee with high attention to detail. Fan of Combat Sports, outdoor activities, Designing and Portraits Drawing. A Member of pretty and large family.
+                    </p>
+                    <p>
+                        Interested in the entire frontend spectrum and working on ambitious projects with positive people.
+                    </p>
+                </div>
+            </div>
+
+            <div className='my-skills'>
+                <div className='my-skills-header'>
+                    <div></div>
+                    <h1>skills & experience</h1>
+                    <div></div>
+                </div>
+                <div className='my-skils-text'>
+                    <p>I create successful responsive webs applications that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts.
+                    </p>
+                    <p>I also have wide experience working with react js and react native also with SASS, styled components and framer motion .
+                    </p>
+                </div>
                 <div className='skills-level'>
                     <h2>front-end</h2>
                     <div className='level-bar1'>
@@ -113,7 +137,7 @@ const About = () => {
                         ></motion.div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </motion.div>
     )
 }

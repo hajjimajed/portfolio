@@ -99,6 +99,7 @@
                     font-size: 18px;
                     font-weight: 400;
                     text-transform: capitalize;
+                    z-index: 1;
                 }
             }
         }
@@ -234,10 +235,6 @@
     }
 }
 
-
-@media(max-width:1000px) {}
-
-@media(max-width:925px) {}
 
 @media(max-width:800px) {
 

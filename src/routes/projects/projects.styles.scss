@@ -1,0 +1,97 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px 100px;
+
+    .projects-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 60px;
+            font-weight: 700;
+            text-transform: capitalize;
+            margin: 0;
+
+            span {
+                font-size: 30px;
+            }
+        }
+
+        .projects-header-intro {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
+            div {
+                width: 60px;
+                height: 2px;
+                background-color: #ffffff;
+            }
+
+            h1 {
+                font-size: 24px;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin: 0 30px;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+@media(max-width:800px) {
+    .projects-container .projects-header h1 {
+        font-size: 50px;
+    }
+
+    .projects-container .projects-header h1 span {
+        font-size: 22px;
+    }
+}
+
+@media(max-width:725px) {
+    .projects-container .projects-header .projects-header-intro h1 {
+        font-size: 18px;
+        margin: 0 15px;
+    }
+
+    .projects-container .projects-header .projects-header-intro div {
+        width: 40px;
+    }
+}
+
+@media(max-width:570px) {
+    .projects-container .projects-header h1 {
+        font-size: 40px;
+    }
+
+    .projects-container .projects-header h1 span {
+        font-size: 18px;
+    }
+
+    .projects-container .projects-header .projects-header-intro h1 {
+        font-size: 14px;
+        margin: 0 15px;
+    }
+}
+
+@media(max-width:480px) {
+    .projects-container .projects-header .projects-header-intro h1 {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    .projects-container .projects-header .projects-header-intro div {
+        width: 20px;
+    }
+}

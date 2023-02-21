@@ -1,0 +1,307 @@
+.project-preview-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    margin: 50px 0;
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: -150px;
+        z-index: 1;
+
+        h1 {
+            font-size: 60px;
+            font-weight: 700;
+            color: #fc6dab;
+            text-transform: capitalize;
+            margin: 0;
+            margin-bottom: 20px;
+
+            span {
+                font-size: 30px;
+                color: #fc6dab;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .project-link {
+            margin-top: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+
+            h1 {
+                font-size: 18px;
+                font-weight: 400;
+                text-transform: capitalize;
+                color: #fff;
+                margin: 0;
+                transition: 0.2s ease-in all;
+            }
+
+            .link-arrow {
+                width: 25px;
+                height: auto;
+                opacity: 0;
+                transition: 0.2s ease-in all;
+
+                path {
+                    fill: #fff;
+                }
+            }
+
+            &:hover {
+
+                .link-arrow {
+                    opacity: 1;
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+
+    .project-image {
+        width: 50%;
+        height: auto;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: 0.6s ease-in all;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .project-preview-container .project-info h1 {
+        font-size: 50px;
+    }
+
+    .project-preview-container .project-info h1 span {
+        font-size: 22px;
+    }
+}
+
+@media(max-width:1100px) {
+    .project-preview-container .project-info .project-link {
+        margin-top: 80px;
+    }
+
+    .project-preview-container .project-image {
+        width: 55%;
+    }
+}
+
+@media(max-width:900px) {
+    .project-preview-container .project-info h1 {
+        font-size: 40px;
+    }
+
+    .project-preview-container .project-info h1 span {
+        font-size: 16px;
+    }
+
+    .project-preview-container .project-info p {
+        font-size: 12px;
+    }
+
+    .project-preview-container .project-info .project-link h1 {
+        font-size: 16px;
+    }
+
+    .project-preview-container .project-info .project-link {
+        margin-top: 60px;
+    }
+
+    .project-preview-container .project-image {
+        width: 60%;
+    }
+
+    .project-preview-container .project-info {
+        margin-right: -80px;
+    }
+
+    .projects-container {
+        margin: 40px 80px;
+    }
+}
+
+
+@media(max-width:750px) {
+    .project-preview-container .project-info h1 {
+        font-size: 36px;
+    }
+
+    .project-preview-container .project-info h1 span {
+        font-size: 12px;
+    }
+
+    .project-preview-container .project-info p {
+        font-size: 11px;
+    }
+
+    .project-preview-container .project-info .project-link h1 {
+        font-size: 14px;
+    }
+
+    .project-preview-container .project-info .project-link {
+        margin-top: 55px;
+    }
+
+    .project-preview-container .project-info {
+        margin-right: -80px;
+    }
+
+    .project-preview-container .project-image {
+        width: 65%;
+    }
+}
+
+@media(max-width:660px) {
+    .project-preview-container .project-info h1 {
+        font-size: 32px;
+    }
+
+    .project-preview-container .project-info h1 span {
+        font-size: 12px;
+    }
+
+    .project-preview-container .project-info p {
+        font-size: 11px;
+    }
+
+    .project-preview-container .project-info .project-link h1 {
+        font-size: 14px;
+    }
+
+    .project-preview-container .project-info .project-link {
+        margin-top: 45px;
+    }
+
+    .project-preview-container .project-info {
+        margin-right: -60px;
+    }
+
+    .projects-container {
+        margin: 40px 60px;
+    }
+}
+
+@media(max-width:630px) {
+    .project-preview-container .project-info h1 {
+        font-size: 28px;
+    }
+
+    .project-preview-container .project-info h1 span {
+        font-size: 10px;
+    }
+
+    .project-preview-container .project-info p {
+        font-size: 10px;
+    }
+
+    .project-preview-container .project-info .project-link h1 {
+        font-size: 12px;
+    }
+
+    .project-preview-container .project-info .project-link {
+        margin-top: 35px;
+    }
+
+    .project-preview-container .project-info {
+        margin-right: -80px;
+    }
+
+    .project-preview-container .project-image {
+        width: 65%;
+    }
+
+    .projects-container {
+        margin: 40px 50px;
+    }
+}
+
+@media(max-width:530px) {
+    .project-preview-container .project-info h1 {
+        font-size: 24px;
+    }
+
+    .project-preview-container .project-info h1 span {
+        font-size: 8px;
+    }
+
+    .project-preview-container .project-info p {
+        font-size: 9px;
+    }
+
+    .project-preview-container .project-info .project-link h1 {
+        font-size: 11px;
+    }
+
+    .project-preview-container .project-info .project-link {
+        margin-top: 25px;
+    }
+
+    .projects-container {
+        margin: 40px 30px;
+    }
+}
+
+@media(max-width:450px) {
+
+    .projects-container {
+        margin: 40px 20px;
+    }
+}
+
+@media(max-width:360px) {
+    .project-preview-container .project-info h1 {
+        font-size: 20px;
+    }
+
+    .project-preview-container .project-info h1 span {
+        font-size: 7px;
+    }
+
+    .project-preview-container .project-info p {
+        font-size: 8px;
+    }
+
+    .project-preview-container .project-info .project-link h1 {
+        font-size: 10px;
+    }
+
+    .project-preview-container .project-info .project-link {
+        margin-top: 20px;
+    }
+
+    .projects-container {
+        margin: 40px 30px;
+    }
+
+    .project-preview-container .project-info {
+        margin-right: -60px;
+    }
+}

@@ -91,42 +91,150 @@ const Contact = () => {
 
 
     return (
-        <motion.div
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            className='contact-container'>
+        <div className='contact-container'>
 
-            <motion.div variants={item} className='contact-infos'>
-                <h2 className='contact-me'>contact me</h2>
-                <h1 className='problematique'>Got a problem to solve?</h1>
-                <p className='intro'>Get your space suit ready and tell me your ideas to develop your dream application.</p>
+            <div className='contact-infos'>
+                <motion.h2
+                    initial={{ translateY: 20, opacity: 0 }}
+                    animate={{ translateY: 0, opacity: 1 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1,
+                        delay: 0.3
+                    }}
+                    className='contact-me'>contact me</motion.h2>
+                <motion.h1
+                    initial={{ translateY: 20, opacity: 0 }}
+                    animate={{ translateY: 0, opacity: 1 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1,
+                        delay: 0.4
+                    }}
+                    className='problematique'>Got a problem to solve?</motion.h1>
+                <motion.p
+                    initial={{ translateY: 20, opacity: 0 }}
+                    animate={{ translateY: 0, opacity: 1 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1,
+                        delay: 0.5
+                    }}
+                    className='intro'>Get your space suit ready and tell me your ideas to develop your dream application.</motion.p>
                 <div className='myinfos'>
-                    <div className='info'><Mail className='info-icon' /><h1>hajjimajed78@gmail.com</h1></div>
-                    <div className='info'><Phone className='info-icon' /><h1>+216 52 047 045</h1></div>
-                    <div className='info'><Pin className='info-icon' /><h1>Sidi Bouzid, Tunisia</h1></div>
+                    <motion.div
+                        initial={{ translateY: 20, opacity: 0 }}
+                        animate={{ translateY: 0, opacity: 1 }}
+                        transition={{
+                            type: "spring",
+                            duration: 1,
+                            delay: 0.6
+                        }}
+                        className='info'><Mail className='info-icon' /><h1>hajjimajed78@gmail.com</h1></motion.div>
+                    <motion.div
+                        initial={{ translateY: 20, opacity: 0 }}
+                        animate={{ translateY: 0, opacity: 1 }}
+                        transition={{
+                            type: "spring",
+                            duration: 1,
+                            delay: 0.7
+                        }}
+                        className='info'><Phone className='info-icon' /><h1>+216 52 047 045</h1></motion.div>
+                    <motion.div
+                        initial={{ translateY: 20, opacity: 0 }}
+                        animate={{ translateY: 0, opacity: 1 }}
+                        transition={{
+                            type: "spring",
+                            duration: 1,
+                            delay: 0.8
+                        }}
+                        className='info'><Pin className='info-icon' /><h1>Sidi Bouzid, Tunisia</h1></motion.div>
                 </div>
-                <div className='social-media'>
+                <motion.div
+                    initial={{ translateY: 20, opacity: 0 }}
+                    animate={{ translateY: 0, opacity: 1 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1,
+                        delay: 0.9
+                    }}
+                    className='social-media'>
                     <Github className='social-media-icon' />
                     <Linkedin className='social-media-icon' />
                     <Instagram className='social-media-icon' />
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
 
             {
                 isMessageSent ? (
-                    <motion.div variants={item} className='message-sent-container'>
-                        <Deal className='deal-icon' />
-                        <h1>thank you for your time</h1>
-                        <h2>we'll be in touch shortly</h2>
-                    </motion.div>
+                    <div className='message-sent-container'>
+                        <motion.div
+                            initial={{ translateY: 20, opacity: 0 }}
+                            animate={{ translateY: 0, opacity: 1 }}
+                            transition={{
+                                type: "spring",
+                                duration: 1,
+                                delay: 0
+                            }}
+                        >  <Deal className='deal-icon' /></motion.div>
+                        <motion.h1
+                            initial={{ translateY: 20, opacity: 0 }}
+                            animate={{ translateY: 0, opacity: 1 }}
+                            transition={{
+                                type: "spring",
+                                duration: 1,
+                                delay: 0.2
+                            }}
+                        >thank you for your time</motion.h1>
+                        <motion.h2
+                            initial={{ translateY: 20, opacity: 0 }}
+                            animate={{ translateY: 0, opacity: 1 }}
+                            transition={{
+                                type: "spring",
+                                duration: 1,
+                                delay: 0.3
+                            }}
+                        >we'll be in touch shortly</motion.h2>
+                    </div>
                 ) : (
-                    <motion.div variants={item} className='contact-form'>
+                    <div className='contact-form'>
                         <form action="" onSubmit={handleSubmit}>
-                            <FormInput label="Name" required type="name" name="name" value={name} onChange={handleChange} />
-                            <FormInput label="Email" required type="email" name="email" value={email} onChange={handleChange} />
-                            <FormInput label="Subject" required type="subject" name="subject" value={subject} onChange={handleChange} />
-                            <div className='message-container'>
+                            <motion.div
+                                initial={{ translateY: 20, opacity: 0 }}
+                                animate={{ translateY: 0, opacity: 1 }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 1,
+                                    delay: 1
+                                }}
+                            >  <FormInput label="Name" required type="name" name="name" value={name} onChange={handleChange} /></motion.div>
+                            <motion.div
+                                initial={{ translateY: 20, opacity: 0 }}
+                                animate={{ translateY: 0, opacity: 1 }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 1,
+                                    delay: 1.1
+                                }}
+                            >  <FormInput label="Email" required type="email" name="email" value={email} onChange={handleChange} /></motion.div>
+                            <motion.div
+                                initial={{ translateY: 20, opacity: 0 }}
+                                animate={{ translateY: 0, opacity: 1 }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 1,
+                                    delay: 1.2
+                                }}
+                            >  <FormInput label="Subject" required type="subject" name="subject" value={subject} onChange={handleChange} /></motion.div>
+                            <motion.div
+                                initial={{ translateY: 20, opacity: 0 }}
+                                animate={{ translateY: 0, opacity: 1 }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 1,
+                                    delay: 1.3
+                                }}
+                                className='message-container'>
                                 <textarea required
                                     className={`message ${hasValue ? "" : "no-value"}`}
                                     onFocus={() => setHasValue(true)}
@@ -136,16 +244,24 @@ const Contact = () => {
                                     value={message}
                                     onChange={handleChange}></textarea>
                                 <label className={`message-label ${labelHasValue ? "shrink" : ""}`}>Message<span> *</span></label>
-                            </div>
-                            <Button type='submit' buttonType='primary'>Send Message</Button>
+                            </motion.div>
+                            <motion.div
+                                initial={{ translateY: 20, opacity: 0 }}
+                                animate={{ translateY: 0, opacity: 1 }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 1,
+                                    delay: 1.4
+                                }}
+                            > <Button type='submit' buttonType='primary'>Send Message</Button></motion.div>
                         </form>
-                    </motion.div>
+                    </div>
                 )
             }
 
 
 
-        </motion.div>
+        </div>
     )
 }
 

@@ -155,9 +155,12 @@
         .deal-icon {
             width: 150px;
             height: auto;
-            filter: invert(69%) sepia(14%) saturate(821%) hue-rotate(3deg) brightness(90%) contrast(86%);
             cursor: pointer;
             margin-bottom: 50px;
+
+            path {
+                fill: #1dd3b0;
+            }
         }
 
         h1 {

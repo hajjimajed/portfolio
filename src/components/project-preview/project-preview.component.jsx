@@ -7,8 +7,10 @@ const ProjectPreview = () => {
         <div className='project-preview-container'>
             <div className='project-info'>
                 <h1>project name<span>&#9632;</span></h1>
-                <p>project genre</p>
-                <p>project info</p>
+                <div>
+                    <p>project genre</p>
+                    <p>project info</p>
+                </div>
                 <Link className='project-link'><h1>view details</h1><Arrow className='link-arrow' /></Link>
             </div>
             <div className='project-image'>

@@ -1,184 +1,59 @@
 .about-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     margin: 40px 100px;
 
     .about-me {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 45%;
 
-        h1 {
-            font-size: 60px;
+        .about-me-header h1 {
+            font-size: 50px;
             font-weight: 700;
             text-transform: capitalize;
-            margin: 0;
-
-            span {
-                font-size: 30px;
-            }
-        }
-
-        .about-me-header {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-
-            div {
-                width: 60px;
-                height: 2px;
-                background-color: #ffffff;
-            }
-
-            h1 {
-                font-size: 24px;
-                font-weight: 500;
-                text-transform: capitalize;
-                margin: 0 30px;
-                text-align: center;
-            }
-        }
-
-        .about-me-profile {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-
-            .about-image {
-                width: 400px;
-                height: 400px;
-                overflow: hidden;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                &:hover {
-                    img {
-                        transform: scale(1.1);
-                    }
-                }
-
-                img {
-                    height: 100%;
-                    width: auto;
-                    transition: 0.6s ease-in-out all;
-                }
-            }
-
-            .about-name {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-left: -150px;
-
-                h1 {
-                    font-size: 60px;
-                    font-weight: 800;
-                    text-transform: capitalize;
-                    color: #fc6dab;
-                    z-index: 1;
-
-                    span {
-                        font-size: 22px;
-                        color: #fc6dab;
-                    }
-                }
-
-                p {
-                    font-size: 18px;
-                    font-weight: 400;
-                    text-transform: capitalize;
-                    z-index: 1;
-                }
-            }
+            color: #1dd3b0;
         }
 
         .about-me-text {
-            width: 80%;
-            margin-top: 50px;
-
             p {
                 font-size: 16px;
                 font-weight: 300;
-                text-transform: capitalize;
             }
         }
     }
 
     .my-skills {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 100px 0;
+        width: 45%;
 
-        .my-skills-header {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-
-            div {
-                width: 60px;
-                height: 2px;
-                background-color: #ffffff;
-            }
-
-            h1 {
-                font-size: 24px;
-                font-weight: 500;
-                text-transform: capitalize;
-                margin: 0 30px;
-                text-align: center;
-            }
+        .my-skills-header h1 {
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: #fc6dab;
         }
 
-        .my-skils-text {
-            width: 80%;
-            margin-top: 50px;
-
+        .my-skills-text {
             p {
                 font-size: 16px;
                 font-weight: 300;
-                text-transform: capitalize;
             }
         }
 
         .skills-level {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            width: 60%;
-            margin-top: 50px;
 
             h2 {
                 font-size: 20px;
-                color: #ffffff;
+                font-weight: 400;
                 text-transform: capitalize;
-                font-weight: 500;
-                margin-bottom: 20px;
             }
 
             .level-bar1 {
                 width: 100%;
-                height: 20px;
-                background-color: #ffffff4c;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
+                height: 8px;
+                background-color: #ffffff5d;
 
                 div {
                     height: 100%;
@@ -189,45 +64,36 @@
 
             .level-bar2 {
                 width: 100%;
-                height: 20px;
-                background-color: #ffffff4c;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
+                height: 8px;
+                background-color: #ffffff5d;
 
                 div {
                     height: 100%;
-                    width: 80%;
+                    width: 70%;
                     background-color: #1dd3b0;
                 }
             }
 
             .level-bar3 {
                 width: 100%;
-                height: 20px;
-                background-color: #ffffff4c;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
+                height: 8px;
+                background-color: #ffffff5d;
 
                 div {
                     height: 100%;
-                    width: 60%;
+                    width: 55%;
                     background-color: #1dd3b0;
                 }
             }
 
             .level-bar4 {
                 width: 100%;
-                height: 20px;
-                background-color: #ffffff4c;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
+                height: 8px;
+                background-color: #ffffff5d;
 
                 div {
                     height: 100%;
-                    width: 55%;
+                    width: 65%;
                     background-color: #1dd3b0;
                 }
             }
@@ -236,371 +102,152 @@
 }
 
 
-@media(max-width:800px) {
-
+@media(max-width:1000px) {
     .about-container {
-        margin: 40px 80px;
-    }
+        flex-direction: column;
 
-    .about-container .about-me h1 {
-        font-size: 50px;
-    }
+        .about-me {
+            width: 100%;
+        }
 
-    .about-container .about-me h1 span {
-        font-size: 22px;
+        .my-skills {
+            width: 100%;
+        }
     }
-
-    .about-container .about-me .about-me-header h1 {
-        font-size: 20px;
-        margin: 0 20px;
-    }
-
-    .about-container .my-skills .my-skills-header h1 {
-        font-size: 20px;
-        margin: 0 20px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 {
-        font-size: 48px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 span {
-        font-size: 18px;
-    }
-
-    .about-container .about-me .about-me-profile .about-image {
-        width: 350px;
-        height: 350px;
-    }
-
-    .about-container .my-skills .skills-level {
-        width: 70%;
-    }
-
 }
 
-@media(max-width:725px) {
-
+@media(max-width:700px) {
     .about-container .about-me .about-me-header h1 {
-        font-size: 18px;
-        margin: 0 15px;
-    }
-
-    .about-container .about-me .about-me-header div {
-        width: 40px;
+        font-size: 45px;
     }
 
     .about-container .my-skills .my-skills-header h1 {
-        font-size: 18px;
-        margin: 0 15px;
+        font-size: 45px;
     }
+}
 
-    .about-container .my-skills .my-skills-header div {
-        width: 40px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 {
+@media(max-width:605px) {
+    .about-container .about-me .about-me-header h1 {
         font-size: 40px;
     }
 
-    .about-container .about-me .about-me-profile .about-name h1 span {
+    .about-container .about-me .about-me-text p {
         font-size: 14px;
     }
 
-    .about-container .about-me .about-me-profile .about-name p {
-        font-size: 15px;
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 40px;
     }
 
-    .about-container .about-me .about-me-profile .about-image {
-        width: 320px;
-        height: 320px;
+    .about-container .my-skills .my-skills-text p {
+        font-size: 14px;
     }
 
-    .about-container .about-me .about-me-profile .about-name {
-        margin-left: -120px;
-    }
-
-    .about-container .about-me .about-me-text p {
-        font-size: 13px;
-    }
-
-    .about-container .my-skills .my-skils-text p {
-        font-size: 13px;
-    }
-
-    .about-container .my-skills .skills-level {
-        width: 75%;
+    .about-container .my-skills .skills-level h2 {
+        font-size: 18px;
     }
 }
 
-@media(max-width:640px) {
+@media(max-width:565px) {
     .about-container {
         margin: 40px 60px;
     }
 
-    .about-container .about-me .about-me-profile .about-image {
-        width: 300px;
-        height: 300px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 {
-        font-size: 38px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 span {
-        font-size: 12px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name p {
-        font-size: 13px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name {
-        margin-left: -110px;
-    }
-
-    .about-container .my-skills .skills-level {
-        width: 80%;
-    }
-}
-
-@media(max-width:570px) {
     .about-container .about-me .about-me-header h1 {
-        font-size: 14px;
-        margin: 0 15px;
-    }
-
-    .about-container .my-skills .my-skills-header h1 {
-        font-size: 14px;
-        margin: 0 15px;
-    }
-
-    .about-container .about-me h1 {
-        font-size: 40px;
-    }
-
-    .about-container .about-me h1 span {
-        font-size: 18px;
-    }
-
-    .about-container .about-me .about-me-profile .about-image {
-        width: 290px;
-        height: 290px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 {
-        font-size: 32px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 span {
-        font-size: 11px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name p {
-        font-size: 12px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name {
-        margin-left: -90px;
-    }
-
-    .about-container {
-        margin: 40px 50px;
-    }
-
-    .about-container .my-skills .skills-level {
-        width: 85%;
-    }
-
-    .about-container .about-me .about-me-text {
-        width: 85%;
-    }
-
-    .about-container .my-skills .skills-level h2 {
-        font-size: 16px;
-    }
-}
-
-@media(max-width:480px) {
-    .about-container .about-me .about-me-header h1 {
-        font-size: 12px;
-        margin: 0 10px;
-    }
-
-    .about-container .about-me .about-me-header div {
-        width: 20px;
-    }
-
-    .about-container .my-skills .my-skills-header h1 {
-        font-size: 12px;
-        margin: 0 10px;
-    }
-
-    .about-container .my-skills .my-skills-header div {
-        width: 20px;
-    }
-
-    .about-container .about-me .about-me-profile .about-image {
-        width: 270px;
-        height: 270px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 {
         font-size: 30px;
     }
 
-    .about-container .about-me .about-me-profile .about-name h1 span {
-        font-size: 10px;
+    .about-container .about-me .about-me-text p {
+        font-size: 12px;
     }
 
-    .about-container .about-me .about-me-profile .about-name p {
-        font-size: 11px;
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 30px;
     }
 
-    .about-container .about-me .about-me-profile .about-name {
-        margin-left: -90px;
+    .about-container .my-skills .my-skills-text p {
+        font-size: 12px;
     }
 
+    .about-container .my-skills .skills-level h2 {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:400px) {
     .about-container {
-        margin: 40px 40px;
+        margin: 40px 30px;
+    }
+
+    .about-container .about-me .about-me-header h1 {
+        font-size: 28px;
     }
 
     .about-container .about-me .about-me-text p {
         font-size: 11px;
     }
 
-    .about-container .my-skills .my-skils-text p {
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 28px;
+    }
+
+    .about-container .my-skills .my-skills-text p {
         font-size: 11px;
     }
 
-    .about-container .my-skills .skills-level {
-        width: 90%;
-    }
-
-    .about-container .about-me .about-me-text {
-        width: 90%;
-    }
-}
-
-@media(max-width:460px) {
-    .about-container .about-me .about-me-profile .about-name h1 {
-        font-size: 25px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 span {
-        font-size: 9px;
-    }
-
-    .about-container .about-me .about-me-profile .about-image {
-        width: 250px;
-        height: 250px;
-    }
-
     .about-container .my-skills .skills-level h2 {
-        font-size: 14px;
-    }
-}
-
-@media(max-width:420px) {
-    .about-container .about-me .about-me-profile .about-name h1 {
-        font-size: 20px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 span {
-        font-size: 7px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name p {
-        font-size: 9px;
-    }
-
-    .about-container {
-        margin: 40px 35px;
-    }
-
-    .about-container .my-skills .skills-level {
-        width: 95%;
-    }
-
-    .about-container .about-me .about-me-text {
-        width: 95%;
-    }
-
-    .about-container .my-skills .skills-level .level-bar1 {
-        height: 16px;
-    }
-
-    .about-container .my-skills .skills-level .level-bar2 {
-        height: 16px;
-    }
-
-    .about-container .my-skills .skills-level .level-bar3 {
-        height: 16px;
-    }
-
-    .about-container .my-skills .skills-level .level-bar4 {
-        height: 16px;
-    }
-}
-
-@media(max-width:395px) {
-
-
-    .about-container .about-me .about-me-profile .about-image {
-        width: 230px;
-        height: 230px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name {
-        margin-left: -70px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 {
-        font-size: 18px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name h1 span {
-        font-size: 7px;
-    }
-
-    .about-container .about-me .about-me-profile .about-name p {
-        font-size: 9px;
-    }
-
-    .about-container {
-        margin: 40px 30px;
-    }
-
-    .about-container .my-skills .skills-level h2 {
-        font-size: 12px;
-    }
-}
-
-@media(max-width:375px) {
-    .about-container .about-me .about-me-profile .about-image {
-        width: 210px;
-        height: 210px;
-    }
-}
-
-@media(max-width:360px) {
-    .about-container .about-me .about-me-profile .about-image {
-        width: 190px;
-        height: 190px;
-    }
-
-    .about-container {
-        margin: 40px 15px;
+        font-size: 13px;
     }
 }
 
 @media(max-width:320px) {
-    .about-container .about-me .about-me-profile .about-image {
-        width: 170px;
-        height: 170px;
+    .about-container {
+        margin: 40px 10px;
     }
 
+    .about-container .about-me .about-me-header h1 {
+        font-size: 24px;
+    }
+
+    .about-container .about-me .about-me-text p {
+        font-size: 10px;
+    }
+
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 24px;
+    }
+
+    .about-container .my-skills .my-skills-text p {
+        font-size: 10px;
+    }
+
+    .about-container .my-skills .skills-level h2 {
+        font-size: 11px;
+    }
+}
+
+@media(max-width:250px) {
     .about-container {
-        margin: 40px 8px;
+        margin: 40px 5px;
+    }
+
+    .about-container .about-me .about-me-header h1 {
+        font-size: 20px;
+    }
+
+    .about-container .about-me .about-me-text p {
+        font-size: 8px;
+    }
+
+    .about-container .my-skills .my-skills-header h1 {
+        font-size: 20px;
+    }
+
+    .about-container .my-skills .my-skills-text p {
+        font-size: 8px;
+    }
+
+    .about-container .my-skills .skills-level h2 {
+        font-size: 9px;
     }
 }

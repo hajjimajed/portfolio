@@ -54,7 +54,7 @@ const Loader = () => {
                     transition={{
                         type: "spring",
                         duration: 1,
-                        delay: 1.5,
+                        delay: 2,
 
                     }}
                     className="sub-logo"

@@ -173,6 +173,14 @@
     .home-container .social-media .social-media-link .social-media-icon {
         margin-left: 20px;
     }
+
+    .home-container .social-media .social-media-link .social-media-icon {
+        width: 15px;
+    }
+
+    .home-container .date h1 {
+        font-size: 12px;
+    }
 }
 
 @media(max-width:500px) {
@@ -220,6 +228,14 @@
 
     .home-container .social-media .social-media-link .social-media-icon {
         margin-left: 12px;
+    }
+
+    .home-container .social-media .social-media-link .social-media-icon {
+        width: 14px;
+    }
+
+    .home-container .date h1 {
+        font-size: 10px;
     }
 
 }

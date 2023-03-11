@@ -21,7 +21,7 @@
         }
 
         .project-infos .line-filling {
-            height: 70%;
+            height: 80%;
         }
     }
 
@@ -30,6 +30,7 @@
         overflow: hidden;
         transition: 0.4s ease-in all;
         cursor: pointer;
+        position: relative;
 
         img {
             width: 100%;
@@ -39,6 +40,13 @@
             filter: grayscale(60%);
         }
 
+        .blueprint {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            width: 40px;
+            height: auto;
+        }
 
     }
 
@@ -84,9 +92,9 @@
             }
 
             .utils {
-                width: 35%;
-                display: flex;
-                justify-content: space-between;
+                width: 80%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
                 margin-left: 20px;
 
                 h2 {
@@ -152,6 +160,12 @@
     }
 }
 
+@media(max-width:1050px) {
+    .project-preview-container .project-infos .infos .utils {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media(max-width:900px) {
     .project-preview-container .project-infos .infos h1 {
         font-size: 18px;
@@ -163,6 +177,10 @@
 
     .project-preview-container .project-infos .live-view .live-view-link svg {
         width: 20px;
+    }
+
+    .project-preview-container .project-image .blueprint {
+        width: 30px;
     }
 }
 
@@ -202,6 +220,10 @@
 
     .project-preview-container {
         width: 85vw;
+    }
+
+    .project-preview-container .project-image .blueprint {
+        width: 20px;
     }
 }
 

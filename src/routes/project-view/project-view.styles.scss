@@ -1,0 +1,162 @@
+.project-view-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .prject-description-one {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 100px;
+
+        h1 {
+            margin: 0;
+            font-size: 52px;
+            line-height: 40px;
+            font-weight: 500;
+            text-transform: capitalize;
+            margin-bottom: 50px;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 18px;
+            line-height: 13px;
+            font-weight: 500;
+            text-transform: capitalize;
+            font-family: 'Space Mono', monospace;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 18px;
+            line-height: 13px;
+            font-weight: 700;
+            text-transform: capitalize;
+            font-family: 'Space Mono', monospace;
+            margin-bottom: 40px;
+        }
+
+        h5 {
+            margin: 0;
+            font-size: 16px;
+            line-height: 13px;
+            font-weight: 400;
+            text-transform: capitalize;
+            font-family: 'Space Mono', monospace;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 27px;
+            font-weight: 400;
+            text-transform: capitalize;
+            font-family: 'Space Mono', monospace;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .project-year {
+            width: 20%;
+        }
+
+        .project-utils {
+            width: 25%;
+        }
+
+        .project-infos {
+            width: 55%;
+        }
+    }
+
+    .project-image {
+        width: 90%;
+        position: relative;
+        margin-bottom: 100px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transition: 0.4s ease-in all;
+        }
+
+        .blueprint {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    .project-live-view-btns {
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .prject-description-two {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 100px;
+
+        h2 {
+            margin: 0 20px;
+            font-size: 40px;
+            line-height: 55px;
+            font-weight: 500;
+            text-transform: capitalize;
+            width: 30%;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 27px;
+            font-weight: 400;
+            text-transform: capitalize;
+            font-family: 'Space Mono', monospace;
+            width: 70%;
+        }
+    }
+
+    .project-gallery {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+
+        .project-gallery-images {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                transition: 0.4s ease-in all;
+                margin: 50px 0;
+
+            }
+        }
+    }
+}

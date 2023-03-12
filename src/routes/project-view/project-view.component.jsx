@@ -2,7 +2,7 @@ import './project-view.styles.scss'
 import { ProjectsContext } from '../../contexts/projects.contexts';
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 
 import Image from '../../components/image/image.component';
 import Button from '../../components/button/button.component';
@@ -40,26 +40,82 @@ const ProjectView = () => {
             <div className='prject-description-one'>
                 <div className='project-data'>
                     <div className='project-year'>
-                        <h4>year</h4>
-                        <h5>{year}</h5>
+                        <motion.h4
+                            initial={{ translateY: 20, opacity: 0 }}
+                            animate={{ translateY: 0, opacity: 1 }}
+                            transition={{
+                                type: "spring",
+                                duration: 0.8,
+                                delay: 0.5
+                            }}
+                        >year</motion.h4>
+                        <motion.h5
+                            initial={{ translateY: 20, opacity: 0 }}
+                            animate={{ translateY: 0, opacity: 1 }}
+                            transition={{
+                                type: "spring",
+                                duration: 0.5,
+                                delay: 0.7
+                            }}
+                        >{year}</motion.h5>
                     </div>
                     <div className='project-utils'>
-                        <h4>utilities</h4>
+                        <motion.h4
+                            initial={{ translateY: 20, opacity: 0 }}
+                            animate={{ translateY: 0, opacity: 1 }}
+                            transition={{
+                                type: "spring",
+                                duration: 0.8,
+                                delay: 0.5
+                            }}
+                        >utilities</motion.h4>
                         {
                             utilities &&
-                            utilities.map((utility) => <h3 key={utility}>{utility}</h3>)
+                            utilities.map((utility) => <motion.h3
+                                initial={{ translateY: 20, opacity: 0 }}
+                                animate={{ translateY: 0, opacity: 1 }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 0.5,
+                                    delay: 0.7
+                                }}
+                                key={utility}>{utility}</motion.h3>)
                         }
                     </div>
                 </div>
                 <div className='project-infos'>
-                    <h1>{name}</h1>
-                    <p>{description1}</p>
+                    <motion.h1
+                        initial={{ translateY: 20, opacity: 0 }}
+                        animate={{ translateY: 0, opacity: 1 }}
+                        transition={{
+                            type: "spring",
+                            duration: 0.8,
+                            delay: 0.5
+                        }}
+                    >{name}</motion.h1>
+                    <motion.p
+                        initial={{ translateY: 20, opacity: 0 }}
+                        animate={{ translateY: 0, opacity: 1 }}
+                        transition={{
+                            type: "spring",
+                            duration: 0.5,
+                            delay: 0.7
+                        }}
+                    >{description1}</motion.p>
                 </div>
             </div>
 
-            <div className='project-image'>
+            <motion.div
+                initial={{ translateY: 20, opacity: 0 }}
+                animate={{ translateY: 0, opacity: 1 }}
+                transition={{
+                    type: "spring",
+                    duration: 0.5,
+                    delay: 1
+                }}
+                className='project-image'>
                 <img src={display} alt="" />
-            </div>
+            </motion.div>
 
             <div className='project-live-view-btns'>
                 <Link to={github}>

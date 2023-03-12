@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 import Image from '../../components/image/image.component';
 import Button from '../../components/button/button.component';
+import { SmoothProvider } from 'react-smooth-scrolling';
 
 
 const ProjectView = () => {

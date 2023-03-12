@@ -3,6 +3,7 @@ import Button from '../../components/button/button.component'
 import FormInput from '../../components/form-input/form-input.component'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 import { ReactComponent as Mail } from '../../assets/mail.svg'
 import { ReactComponent as Phone } from '../../assets/phone.svg'
@@ -159,9 +160,9 @@ const Contact = () => {
                         delay: 0.9
                     }}
                     className='social-media'>
-                    <Github className='social-media-icon' />
-                    <Linkedin className='social-media-icon' />
-                    <Instagram className='social-media-icon' />
+                    <Link to='https://github.com/hajjimajed'><Github className='social-media-icon' /></Link>
+                    <Link to='https://www.linkedin.com/in/majed-hajji-27a5a41b2/'><Linkedin className='social-media-icon' /></Link>
+                    <Link to='https://www.instagram.com/majed_hajjii/'><Instagram className='social-media-icon' /></Link>
                 </motion.div>
             </div>
 

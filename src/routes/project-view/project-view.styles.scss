@@ -10,7 +10,8 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+        margin-top: 50px;
 
         h1 {
             margin: 0;
@@ -66,13 +67,14 @@
             align-items: flex-start;
         }
 
-        .project-year {
-            width: 20%;
+        .project-data {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 45%;
         }
 
-        .project-utils {
-            width: 25%;
-        }
+
 
         .project-infos {
             width: 55%;
@@ -82,21 +84,12 @@
     .project-image {
         width: 90%;
         position: relative;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
 
         img {
             width: 100%;
             height: auto;
             object-fit: contain;
-            transition: 0.4s ease-in all;
-        }
-
-        .blueprint {
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
-            width: 50px;
-            height: auto;
         }
     }
 
@@ -105,7 +98,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .prject-description-two {
@@ -113,7 +106,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
 
         h2 {
             margin: 0 20px;
@@ -154,9 +147,143 @@
                 height: auto;
                 object-fit: contain;
                 transition: 0.4s ease-in all;
-                margin: 50px 0;
+                margin: 20px 0;
 
             }
         }
+    }
+}
+
+
+
+@media(max-width:1000px) {
+    .project-view-container .prject-description-one p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .project-view-container .prject-description-one p {
+        font-size: 12px;
+    }
+
+    .project-view-container .prject-description-one h3 {
+        font-size: 14px;
+    }
+
+    .project-view-container .prject-description-one h5 {
+        font-size: 14px;
+    }
+
+    .project-view-container .prject-description-one h4 {
+        font-size: 14px;
+    }
+
+    .project-view-container .prject-description-one h1 {
+        font-size: 46px;
+    }
+
+    .project-view-container .prject-description-two p {
+        font-size: 12px;
+    }
+
+    .project-view-container .prject-description-two h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+@media(max-width:700px) {
+
+    .project-view-container .prject-description-one .project-data {
+        width: 35%;
+    }
+
+    .project-view-container .prject-description-one .project-infos {
+        width: 65%;
+    }
+
+    .project-view-container .project-live-view-btns {
+        width: 75%;
+    }
+}
+
+
+@media(max-width:650px) {
+    .project-view-container .prject-description-one {
+        flex-direction: column;
+    }
+
+    .project-view-container .prject-description-one .project-data {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .project-view-container .prject-description-one div {
+        margin-right: 100px;
+    }
+
+    .project-view-container .prject-description-one .project-infos {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .project-view-container .prject-description-two {
+        flex-direction: column;
+    }
+
+    .project-view-container .prject-description-two h2 {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .project-view-container .prject-description-two p {
+        width: 100%;
+    }
+}
+
+@media(max-width:500px) {
+    .project-view-container .prject-description-two h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+
+@media(max-width:400px) {
+    .project-view-container .prject-description-one p {
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    .project-view-container .prject-description-one h3 {
+        font-size: 12px;
+    }
+
+    .project-view-container .prject-description-one h5 {
+        font-size: 12px;
+    }
+
+    .project-view-container .prject-description-one h4 {
+        font-size: 12px;
+    }
+
+    .project-view-container .prject-description-one h1 {
+        font-size: 38px;
+    }
+
+    .project-view-container .project-live-view-btns {
+        width: 90%;
+    }
+
+    .project-view-container .prject-description-two p {
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    .project-view-container .prject-description-two h2 {
+        font-size: 22px;
+        line-height: 28px;
     }
 }

@@ -1,5 +1,5 @@
 import './App.scss';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import Navigation from './routes/navigation/navigation.component';
@@ -14,6 +14,7 @@ import Loader from './components/loader/loader.component';
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,22 +24,25 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <>
-
-      {isLoading ? <Loader /> :
+      {isLoading ? (
+        <Loader />
+      ) : (
         <Routes>
-          <Route path='/' element={<Navigation />}>
+          <Route path="/" element={<Navigation />}>
             <Route index element={<Home />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/projects/:projectName" element={<ProjectView />} />
           </Route>
         </Routes>
-      }
-
-
+      )}
     </>
   );
 }

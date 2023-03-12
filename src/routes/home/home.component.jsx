@@ -105,9 +105,9 @@ const Home = () => {
                         delay: 1.5
                     }}
                     className='social-media'>
-                    <Link className='social-media-link'> <Github className='social-media-icon' /></Link>
-                    <Link className='social-media-link'> <Linkedin className='social-media-icon' /></Link>
-                    <Link className='social-media-link'> <Instagram className='social-media-icon' /></Link>
+                    <Link to='https://github.com/hajjimajed' className='social-media-link'> <Github className='social-media-icon' /></Link>
+                    <Link to='https://www.linkedin.com/in/majed-hajji-27a5a41b2/' className='social-media-link'> <Linkedin className='social-media-icon' /></Link>
+                    <Link to='https://www.instagram.com/majed_hajjii/' className='social-media-link'> <Instagram className='social-media-icon' /></Link>
                 </motion.div>
             </div>
 

@@ -27,14 +27,7 @@ const Loader = () => {
         <div className='loader-container'>
             <div className='loader-logo-container'>
                 <motion.svg
-                    initial={{ opacity: 1, scale: 1 }}
-                    animate={{ opacity: 0, scale: 0 }}
-                    transition={{
-                        type: "spring",
-                        duration: 1,
-                        delay: 4.5,
 
-                    }}
                     className="logo"
                     width="188" height="219" viewBox="0 0 188 219" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <motion.path

@@ -160,9 +160,9 @@ const Contact = () => {
                         delay: 0.9
                     }}
                     className='social-media'>
-                    <Link to='https://github.com/hajjimajed'><Github className='social-media-icon' /></Link>
-                    <Link to='https://www.linkedin.com/in/majed-hajji-27a5a41b2/'><Linkedin className='social-media-icon' /></Link>
-                    <Link to='https://www.instagram.com/majed_hajjii/'><Instagram className='social-media-icon' /></Link>
+                    <Link target="_blank" to='https://github.com/hajjimajed'><Github className='social-media-icon' /></Link>
+                    <Link target="_blank" to='https://www.linkedin.com/in/majed-hajji-27a5a41b2/'><Linkedin className='social-media-icon' /></Link>
+                    <Link target="_blank" to='https://www.instagram.com/majed_hajjii/'><Instagram className='social-media-icon' /></Link>
                 </motion.div>
             </div>
 

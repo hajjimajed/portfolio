@@ -61,7 +61,7 @@ const ProjectPreview = ({ project }) => {
                         delay: 1.3
                     }}
                     className='live-view'>
-                    <Link to={github} className='live-view-link'>
+                    <Link to={github} target="_blank" className='live-view-link'>
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                             width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
                             preserveAspectRatio="xMidYMid meet">
@@ -88,7 +88,7 @@ c-177 -34 -396 33 -524 160 -33 33 -83 92 -110 133 -27 40 -69 95 -94 122 -46
                             </g>
                         </svg>
                     </Link>
-                    <Link to={live} className='live-view-link'>
+                    <Link to={live} target="_blank" className='live-view-link'>
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                             width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
                             preserveAspectRatio="xMidYMid meet">
@@ -113,8 +113,8 @@ l-28 -88 -3 -1525 c-2 -1045 1 -1547 8 -1594 29 -187 103 -329 245 -471 142
                         </svg>
                     </Link>
                 </motion.div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 

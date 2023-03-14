@@ -143,10 +143,10 @@ const ProjectView = () => {
                     </motion.div>
 
                     <div className='project-live-view-btns'>
-                        <Link to={github}>
+                        <Link target="_blank" to={github}>
                             <Button id='btn1' buttonType='primary'>repository</Button>
                         </Link>
-                        <Link to={live}>
+                        <Link target="_blank" to={live}>
                             <Button buttonType='secondary'>live view</Button>
                         </Link>
                     </div>

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 
+import Loader from '../../components/loader/loader.component';
 import Button from '../../components/button/button.component';
 import { ReactComponent as Github } from '../../assets/github.svg'
 import { ReactComponent as Linkedin } from '../../assets/linkedin.svg'
@@ -30,10 +31,22 @@ const Home = () => {
     let month = newDate.getMonth() + 1;
     let year = newDate.getFullYear();
 
+
+
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (isLoading) {
+        return <Loader />;
+    }
     return (
         <>
-
-
             <div className='home-container'>
                 <div className='welcoming'>
                     <motion.h1

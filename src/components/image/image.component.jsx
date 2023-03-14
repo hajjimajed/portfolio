@@ -15,7 +15,7 @@ const squareVariants = {
     hidden: { opacity: 0, translateY: 200 }
 };
 
-const Image = ({ image }) => {
+const Imagee = ({ image }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView();
     useEffect(() => {
@@ -33,4 +33,4 @@ const Image = ({ image }) => {
     )
 }
 
-export default Image;
+export default Imagee;

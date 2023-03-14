@@ -4,9 +4,10 @@ import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import Image from '../../components/image/image.component';
+import Imagee from '../../components/image/image.component'
 import Button from '../../components/button/button.component';
 import { SmoothProvider } from 'react-smooth-scrolling';
+import Loader from '../../components/loader/loader.component';
 
 
 const ProjectView = () => {
@@ -36,43 +37,88 @@ const ProjectView = () => {
 
     const { name, description1, description2, images, utilities, display, year, github, live } = currentProject;
 
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        if (images && Array.isArray(images)) {
+            const imageLoaders = images.map((imgSrc) => {
+                const image = new Image();
+                image.src = imgSrc;
+                return new Promise((resolve) => {
+                    image.onload = resolve;
+                });
+            });
+
+            Promise.all(imageLoaders).then(() => {
+                setTimeout(() => {
+                    setImagesLoaded(true);
+                }, 3000);
+            });
+        }
+    }, [currentProject, images]);
+
     return (
-        <div className='project-view-container'>
-            <div className='prject-description-one'>
-                <div className='project-data'>
-                    <div className='project-year'>
-                        <motion.h4
-                            initial={{ translateY: 20, opacity: 0 }}
-                            animate={{ translateY: 0, opacity: 1 }}
-                            transition={{
-                                type: "spring",
-                                duration: 0.8,
-                                delay: 0.5
-                            }}
-                        >year</motion.h4>
-                        <motion.h5
-                            initial={{ translateY: 20, opacity: 0 }}
-                            animate={{ translateY: 0, opacity: 1 }}
-                            transition={{
-                                type: "spring",
-                                duration: 0.5,
-                                delay: 0.7
-                            }}
-                        >{year}</motion.h5>
-                    </div>
-                    <div className='project-utils'>
-                        <motion.h4
-                            initial={{ translateY: 20, opacity: 0 }}
-                            animate={{ translateY: 0, opacity: 1 }}
-                            transition={{
-                                type: "spring",
-                                duration: 0.8,
-                                delay: 0.5
-                            }}
-                        >utilities</motion.h4>
-                        {
-                            utilities &&
-                            utilities.map((utility) => <motion.h3
+        <>
+            {!imagesLoaded && <Loader />}
+            {imagesLoaded && (
+                <div className='project-view-container'>
+                    <div className='prject-description-one'>
+                        <div className='project-data'>
+                            <div className='project-year'>
+                                <motion.h4
+                                    initial={{ translateY: 20, opacity: 0 }}
+                                    animate={{ translateY: 0, opacity: 1 }}
+                                    transition={{
+                                        type: "spring",
+                                        duration: 0.8,
+                                        delay: 0.5
+                                    }}
+                                >year</motion.h4>
+                                <motion.h5
+                                    initial={{ translateY: 20, opacity: 0 }}
+                                    animate={{ translateY: 0, opacity: 1 }}
+                                    transition={{
+                                        type: "spring",
+                                        duration: 0.5,
+                                        delay: 0.7
+                                    }}
+                                >{year}</motion.h5>
+                            </div>
+                            <div className='project-utils'>
+                                <motion.h4
+                                    initial={{ translateY: 20, opacity: 0 }}
+                                    animate={{ translateY: 0, opacity: 1 }}
+                                    transition={{
+                                        type: "spring",
+                                        duration: 0.8,
+                                        delay: 0.5
+                                    }}
+                                >utilities</motion.h4>
+                                {
+                                    utilities &&
+                                    utilities.map((utility) => <motion.h3
+                                        initial={{ translateY: 20, opacity: 0 }}
+                                        animate={{ translateY: 0, opacity: 1 }}
+                                        transition={{
+                                            type: "spring",
+                                            duration: 0.5,
+                                            delay: 0.7
+                                        }}
+                                        key={utility}>{utility}</motion.h3>)
+                                }
+                            </div>
+                        </div>
+                        <div className='project-infos'>
+                            <motion.h1
+                                initial={{ translateY: 20, opacity: 0 }}
+                                animate={{ translateY: 0, opacity: 1 }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 0.8,
+                                    delay: 0.5
+                                }}
+                            >{name}</motion.h1>
+                            <motion.p
                                 initial={{ translateY: 20, opacity: 0 }}
                                 animate={{ translateY: 0, opacity: 1 }}
                                 transition={{
@@ -80,68 +126,48 @@ const ProjectView = () => {
                                     duration: 0.5,
                                     delay: 0.7
                                 }}
-                                key={utility}>{utility}</motion.h3>)
-                        }
+                            >{description1}</motion.p>
+                        </div>
                     </div>
-                </div>
-                <div className='project-infos'>
-                    <motion.h1
-                        initial={{ translateY: 20, opacity: 0 }}
-                        animate={{ translateY: 0, opacity: 1 }}
-                        transition={{
-                            type: "spring",
-                            duration: 0.8,
-                            delay: 0.5
-                        }}
-                    >{name}</motion.h1>
-                    <motion.p
+
+                    <motion.div
                         initial={{ translateY: 20, opacity: 0 }}
                         animate={{ translateY: 0, opacity: 1 }}
                         transition={{
                             type: "spring",
                             duration: 0.5,
-                            delay: 0.7
+                            delay: 1
                         }}
-                    >{description1}</motion.p>
+                        className='project-image'>
+                        <img src={display} alt="" />
+                    </motion.div>
+
+                    <div className='project-live-view-btns'>
+                        <Link to={github}>
+                            <Button id='btn1' buttonType='primary'>repository</Button>
+                        </Link>
+                        <Link to={live}>
+                            <Button buttonType='secondary'>live view</Button>
+                        </Link>
+                    </div>
+
+                    <div className='prject-description-two'>
+                        <h2>Stand out from the crowd</h2>
+                        <p>{description2}</p>
+                    </div>
+
+                    <div className='project-gallery'>
+                        <div className='project-gallery-images'>
+                            {images && Array.isArray(images) && images.length > 0 &&
+                                images.map((img) => (
+                                    <Imagee key={img} image={img} />
+                                ))}
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-
-            <motion.div
-                initial={{ translateY: 20, opacity: 0 }}
-                animate={{ translateY: 0, opacity: 1 }}
-                transition={{
-                    type: "spring",
-                    duration: 0.5,
-                    delay: 1
-                }}
-                className='project-image'>
-                <img src={display} alt="" />
-            </motion.div>
-
-            <div className='project-live-view-btns'>
-                <Link to={github}>
-                    <Button id='btn1' buttonType='primary'>repository</Button>
-                </Link>
-                <Link to={live}>
-                    <Button buttonType='secondary'>live view</Button>
-                </Link>
-            </div>
-
-            <div className='prject-description-two'>
-                <h2>Stand out from the crowd</h2>
-                <p>{description2}</p>
-            </div>
-
-            <div className='project-gallery'>
-                <div className='project-gallery-images'>
-                    {
-                        images &&
-                        images.map((image) => <Image image={image}></Image>)
-                    }
-                </div>
-            </div>
-
-        </div>
+            )}
+        </>
     )
 
 }

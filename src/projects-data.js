@@ -48,6 +48,33 @@ const PROJECTS_DATA = [
                     'sass',
                     'framer-motion'
                 ]
+            },
+            {
+                name: 'choco shop',
+                id: 3,
+                description1: 'The bridal stores are fantasyland. Brides arrive hoping to fulfill one of their most significant aspirations, to make a very difficult and emotional choice, and they are aware that their loved ones memories of this day will last a lifetime.',
+                description2: 'We considered how  could ultimately redefine the bridal shopping experience from beginning to end. We always look to create scenarios by thinking of how to show products as a “piece of Art“, . Is also important to pay attention to the fitting rooms and catwalk areas which is one of principal part of our design to make the bride  feel beautiful, calm and confident surrounded by her family and friends.',
+                cover: 'https://i.ibb.co/JBQ16mc/cb18a3df-17f5-4cff-94a1-13abadbf2755.png',
+                display: 'https://i.ibb.co/5xMRMwn/Untitled-1.png',
+                github: 'https://github.com/hajjimajed/choco-shop',
+                live: 'https://brilliant-chaja-463b2e.netlify.app/',
+                year: 2022,
+                images: [
+                    'https://i.ibb.co/DVT51Fh/fb8ec59a-c83b-484e-9638-2ca9e1384537.png',
+                    'https://i.ibb.co/Lhrbd3c/ed2e3e92-2a65-4778-a86c-c08e39de09f3.png',
+                    'https://i.ibb.co/bL1n0hm/ecd6af1f-6953-41f3-8e9c-31e7784aa5e1.png',
+                    'https://i.ibb.co/P9wcHgn/cd81bfa9-44d0-49e8-927e-51cc39a8b70c.png',
+                    'https://i.ibb.co/BKK1jQC/b63b6cbe-1e61-43a9-88b3-771a28663899.png',
+                    'https://i.ibb.co/nRBG55j/9156c86b-6ea0-4586-9916-689465d2dda5.png'
+                ],
+                utilities: [
+                    'react',
+                    'firebase',
+                    'redux',
+                    'sass',
+                    'framer-motion',
+                    'stripe'
+                ]
             }
         ]
     }

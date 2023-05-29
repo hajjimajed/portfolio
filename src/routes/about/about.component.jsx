@@ -60,7 +60,7 @@ const About = () => {
                             delay: 0.7
                         }}
                     >
-                        I’m a Front-End Developer located in Tunisia. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+                        I’m a Web Developer located in Tunisia. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
                     </motion.p>
                     <motion.p
                         initial={{ translateY: 20, opacity: 0 }}
@@ -82,7 +82,7 @@ const About = () => {
                             delay: 0.9
                         }}
                     >
-                        Interested in the entire frontend spectrum and working on ambitious projects with positive people.
+                        Interested in the entire web design spectrum and working on ambitious projects with positive people.
                     </motion.p>
                 </div>
             </div>
@@ -108,7 +108,7 @@ const About = () => {
                             duration: 1,
                             delay: 1.3
                         }}
-                    >I create successful responsive webs applications that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts.
+                    >I specialize in creating highly successful and responsive web applications that prioritize speed, usability, and adherence to industry best practices. With my expertise primarily focused on front-end development, I excel in crafting engaging user experiences using HTML, CSS, and JavaScript.
                     </motion.p>
                     <motion.p
                         initial={{ translateY: 20, opacity: 0 }}
@@ -118,7 +118,7 @@ const About = () => {
                             duration: 1,
                             delay: 1.4
                         }}
-                    >I also have wide experience working with react js and react native also with SASS, styled components and framer motion .
+                    >Moreover, I possess extensive experience working with popular frameworks such as React.js and React Native, enabling me to deliver cutting-edge solutions for both web and mobile platforms. I am well-versed in utilizing tools like SASS, styled components, and framer motion to enhance the visual appeal and functionality of applications. Furthermore, my proficiency extends to working with Angular, Node.js, and Express.js, allowing me to offer a comprehensive range of services across the entire development stack.
                     </motion.p>
                 </div>
                 <div className='skills-level'>
@@ -130,7 +130,7 @@ const About = () => {
                             duration: 1,
                             delay: 1.7
                         }}
-                    >front-end</motion.h2>
+                    >React Js</motion.h2>
                     <motion.div
                         initial={{ translateY: 20, opacity: 0 }}
                         animate={{ translateY: 0, opacity: 1 }}
@@ -159,7 +159,7 @@ const About = () => {
                             duration: 1,
                             delay: 1.7
                         }}
-                    >react JS</motion.h2>
+                    >Angular Js</motion.h2>
                     <motion.div
                         initial={{ translateY: 20, opacity: 0 }}
                         animate={{ translateY: 0, opacity: 1 }}
@@ -217,7 +217,7 @@ const About = () => {
                             duration: 1,
                             delay: 1.7
                         }}
-                    >node.js</motion.h2>
+                    >node js</motion.h2>
                     <motion.div
                         initial={{ translateY: 20, opacity: 0 }}
                         animate={{ translateY: 0, opacity: 1 }}
